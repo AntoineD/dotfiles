@@ -1,0 +1,1013 @@
+d.GetNVars()
+d.GetNCellTypes()
+d.GetNCells()
+b.ToString()
+pritn b.ToString()
+print b.ToString()
+28*5*4
+28*5*
+30*7*6
+29*6*5
+v=d.GetData()
+v=d.GetValues()
+v.Is1D()
+v.Is2D()
+v.NDims()
+v.Size()
+v.Size(0)
+v.CheckDim()
+v.CheckDim(0)
+v.CheckDim(1)
+b=mesh.GetBlock(0)
+d=b.GetDataset('ro')
+print b.ToString()
+print d.ToString()
+v=d.GetValues()
+v.CheckDim(1)
+v.CheckDim(0)
+v.Size(0)
+v.Size()
+v.Size(0)
+mesh
+b=mesh.GetBlock(0)
+d=b.GetDataset('ro')
+v=d.GetValues()
+v.Size(0)
+v.Size()
+self.dma
+self.__extractor_file
+p format
+p format_
+format
+format_
+file__.format(format_)
+b=mesh.GetBlock(0)
+b.ToString()
+print b.ToString()
+d=b.GetDataset('Coordinates')
+print d.ToString()
+v=d.GetValues()
+v.Size()
+v.Size(0)
+import mpi4py
+mpi4py.__file__
+import FSDM
+import mpi4py
+mpi4py.MPI
+mpi4py.__version__
+import mpi4py
+mpi4py.__version__
+mpi4py.__file__
+import mpi4py
+mpi4py.__file__
+import site
+site.getusersitepackages()
+impor yss
+import sys
+sys.path
+import sys
+sys.path
+import sys
+sys.path
+import mpi4py
+mpi4py.__file__
+import mpi4py
+mpi4pyMPI
+mpi4py.MPI
+mpi4py.__file__
+from mpi4py import MPI
+import FSDM
+import elsA_user as a
+import FSDM
+import mpi4py
+from mpi4py import MPI
+import elsA_user as a
+a.getProc()
+from mpi4py import MPI
+import elsA_user as a
+c=cfdpb()
+q
+import toto
+import FSDM
+from FSDM import FSDataName
+import FSDataManager
+from FSDataManager import FSDataName
+from FSDataManager import FSDataName_Displacement
+from FSDataManager import FSDataName_Displacements
+FSDataName_Displacement
+FSDataName_Displacement?
+FSDataName_Displacement()
+print FSDataName_Displacement()
+print FSDataName_Displacements()
+print FSDataName.Displacements()
+print FSDataName.Displacements().X()
+x= FSDataName.Displacements()
+x.Rotations()
+print x.Rotations()
+x= FSDataName.Displacements().Rotations()
+print  FSDataName.Displacements().Rotations()
+import mpi4py
+from mpi4py import MPI
+import elsA_user as a
+x=a.aelitf()
+from mpi4py import MPI
+import elsA_user as a
+from mpi4py import MPI
+import elsA_user as a
+import FSDataManager
+import re
+re.findall('sf(\d+)_blk_(\d+)', 'sf1028_blk_2')
+p i
+i
+index
+index.ToString()
+print index.ToString()
+index[0]
+index[1]
+index[2]
+indexes
+print indexes.ToString()
+print window.IndexDimsIJK(block)
+x= window.IndexDimsIJK(block)
+print x
+print x[0]
+x= window.IndexDimsIJK(block)[0]
+print x
+print indexes.ToString()
+from mpi4py import MPI
+import elsA_user as a
+c=a.cfdpb()
+c.__class__
+c.__class__.__name__
+from mpi4py import MPI
+import elsA_user as a
+c=a.cfdpb()
+from mpi4py import MPI
+import elsA_user as a
+c=a.aelpb()
+c.__class__.__name__
+c.get_clas
+c.get_clas()
+c.getClass()
+c.get_uclas()
+import FSDM
+
+import os
+import posixpath
+posixpath.basename?
+posixpath.basename('/x/y/z')
+posixpath.direname('/x/y/z')
+posixpath.dirname('/x/y/z')
+import sys
+ sys.argv.insert(1, '--use_stubs')
+sys.argv.insert(1, '--use_stubs')
+from mpi4py import MPI
+import sys
+sys.argv.insert(1, '--use_stubs')
+import elsA_user
+cmdline = elsA_user.cmdline()
+cmdline.set_param('execute', 'off')
+cd data/naca64-ael/test
+ll
+rm -rf elsA_MPI_Pid_*
+l
+ll
+rm -rf core.*
+ll
+%help
+%logstart
+help
+help()
+?
+%logstart
+import sys
+from mpi4py import MPI
+import elsA_user
+cmdline = elsA_user.cmdline()
+cmdline.set_param('execute', 'off')
+import elsa
+%run ipython_log.py
+import sys
+from mpi4py import MPI
+import elsA_user
+cmdline = elsA_user.cmdline()
+cmdline.set_param('execute', 'off')
+%run elsa
+%logstart
+import sys
+from mpi4py import MPI
+sys.argv.insert(1, '--use_stubs')
+import elsA_user
+cmdline = elsA_user.cmdline()
+cmdline.set_param('execute', 'off')
+%run ipython_log.py
+%run elsa.py
+q
+import sys
+sys.argv.insert(1, '--use_stubs')
+from mpi4py import MPI
+import elsA_user
+cmdline.set_param('execute', 'off')
+import elsA_user
+import sys
+from mpi4py import MPI
+sys.argv.insert(1, '--use_stubs')
+import elsA_user
+cmdline = elsA_user.cmdline()
+cmdline.set_param('execute', 'off')
+%logstart
+import sys
+sys.argv.insert(1, '--use_stubs')
+from mpi4py import MPI
+import elsA_user
+%logstart
+import sys
+sys.argv.insert(1, '--use_stubs')
+from mpi4py import MPI
+import elsA_user
+cmdline = elsA_user.cmdline()
+cmdline.set_param('execute', 'off')
+isaeroelastic
+f1
+f1.__class__
+f1.__bases__
+f1.__mro__
+f1.__dict__
+f1.name
+f1.name()
+_attrs
+_attrdict
+print _attrdict
+_macrs
+parameters
+parameters.get(cfdpb')
+parameters.get('cfdpb')
+parameters.get?
+import FSDM
+list?
+p self.input
+self.input
+str(self.input)
+log_dir
+log_dir / 'FSDM
+log_dir / 'FSDM'
+local.cwd
+import scenarii
+scenarii.__file__
+scenarii.__path__
+import scenarii
+scenarii.__path__
+from mpi4py import MPI
+import elsA_user as e
+e.getProc?
+from mpi4py import MPI
+import FSDataManager
+from FSDataManager import FSRelationsModelNode
+from FSDataManager import FSRelationsModelNode as q
+parameters
+d={}
+d.update?
+import os
+os.environ
+'RESTART_DONE' in os.environ
+d={}
+d.pop?
+import logging
+logging.getLogger()
+l=logging.getLogger()
+l.name
+l.handlers
+import logging
+l=logging.getLogger()
+l.handlers
+d={}
+d.get(0)
+print d.get(0)
+print d.get('')
+self.block.GetID()
+import numpy
+import sysy
+import sys
+sys.__file__
+sys.__path__
+import FSDataManager
+from FSDataManager import FSDataManager
+from FSDataManager import FSDataManager as dm
+dm.UpdateRelationsModel?
+from FSDataManager import FSDataManager as dm
+rm=dm.GetRelationsModel()
+dm=dm()
+rm=dm.GetRelationsModel()
+rm.IsInitialized()
+from FSDataManager import FSUpdateModelParams as p
+import FSDataManager
+from FSDataManager import FSDataManager as dm
+dm.InitRelationsModelFromMesh?
+'{}{}'.format(0,0)
+'{}{}'.format(0)
+v=self._sources.values()
+v
+v[0]
+v[0] == v[1]
+set(v)
+len(set(v))
+v[0].
+vv=v[0]
+vv.__hash__?
+v=self._sources.values()
+v
+set(v)
+v=self._sources.values()
+v
+set(v)
+v=self._sources.values()
+54000/60
+54000/24
+54000/24/30
+import os
+os.getcwd?
+def toto(): for i in range(3): yield i,i
+def toto():for i in range(3): yield i,i
+def toto():
+    for i in range(3):
+        yield i,i
+dict(toto())
+def toto():
+    for i in range(3):
+        yield i,i
+{-x:y for x,y in toto()}
+mesh.GetBlockIDs()
+mesh.GetBlockIDs()[0]
+mesh.GetBlockByID(1)
+b=mesh.GetBlockByID(1)
+b.GetData?
+b.GetDatasetNames()
+map(str, b.GetDatasetNames())
+b.GetDataset('ro')
+d=b.GetDataset('rou')
+d.Check()
+d.GetCellType()
+d.GetCellTypes()
+d.GetDatasetInfo()
+str(d.GetDatasetInfo())
+x=d.GetDatasetInfo()
+x.ToString()
+str(x.ToString())
+d.Check()
+b.GetNCells()
+b.GetNNodes()
+b.GetNHexa8()
+b.GetTopologyType()
+b.Size()
+b.Size(0)
+b.Size(1)
+b.Size(2)
+49*19*4
+48*18*3
+v=d.GetValues()
+v.Size()
+v.NDims()
+v.GetBufSize()
+v.Repr()
+v.Size()
+v.Capacity()
+v.CheckDim
+r=d.GetRind()
+r.I1
+print r.I1
+str(r.I1)
+str(r.I1r.I1)
+r.I1()
+r.I2()
+r.I3()
+r.J1()
+r.J2()
+r.K2()
+r.K1()
+50*20*5
+b=mesh.GetBlockByID(2)
+b.Size(1)
+b.Size(2)
+b.Size(3)
+d=b.GetDataset('rou')
+v=d.GetValues()
+v.Size()
+32*5*20
+v.Repr()
+b=mesh.GetBlockByID(2)
+b
+b=mesh.GetBlockByID(1)
+b
+b=mesh.GetBlockByID(2)
+d=b.GetDataset('rou')
+d
+d.GetDatasetInfo()
+map(str, b.GetDatasetNames())
+d.GetCellType()
+v=d.GetValues()
+v
+v.Size()
+mesh.GetBlockIDs()
+mesh.GetBlockIDs()[0]
+mesh.GetBlockIDs()[1]
+mesh.GetBlockIDs()[2]
+mesh.GetBlockIDs()[3]
+mesh.GetBlockIDs()[4]
+b=mesh.GetBlockByID(6)
+d=b.GetDataset('rou')
+d.GetDatasetInfo()
+mesh.GetBlockIDs()[4]
+d.Check()
+v=d.GetValues()
+v.Size()
+v.Repr()
+d.GetMinMax()
+d.GetNVars()
+d.GetSpecs()
+b=mesh.GetBlockByID(3)
+d=b.GetDataset('rou')
+v=d.GetValues()
+v.Repr()
+b.Size(3)
+b.Size(2)
+b.Size(1)
+import os
+os.abort?
+import FSDatamanaher
+import FSDatamanager
+import FSDataManager
+from FSDataManager import FSMesh
+FSMesh?
+import scipy
+scipy.delete?
+import numpy as np
+np.fft.fft(np.exp(2j * np.pi * np.arange(8) / 8))
+import matplotlib.pyplot as plt
+t = np.arange(256)
+sp = np.fft.fft(np.sin(t))
+freq = np.fft.fftfreq(t.shape[-1])
+p freq
+freq
+p t.shape[-1]
+t.shape[-1]
+plt.plot(freq, sp.real, freq, sp.imag)
+plt.show()
+'toto'.split(':')
+import re
+re.findall?
+re.findall(r'(\w+) *: *(\w+) *= *(\w+)', 'toto')
+re.findall(r'(\w+) *: *(\w+) *= *(\w+)', 'toto:k=v')
+re.findall(r'(\w+) *: *(\w+) *= *(\w+)', 'toto:k= v')
+re.findall(r'(\w+) *: *(\w+) *= *(\w+)', 'toto : k = v')
+re.findall(r'(\w+) *: *(\w+) *= *(\w+)', 'toto : k = v ')
+re.findall(r'(\w+) *: *(\w+) *=(\w+)', 'toto : k = v ')
+re.findall(r'(\w+) *: *(\w+) *= *(\w+)|(\w+)', 'toto : k = v ')
+re.findall(r'(\w+) *: *(\w+) *= *(\w+) *|(\w+)', 'toto : k = v ')
+re.findall(r'((\w+) *: *(\w+) *= *(\w+))|(\w+)', 'toto : k = v ')
+re.findall(r'((\w+) *: *(\w+) *= *(\w+))|((\w+))', 'toto : k = v ')
+d={0:1,2:3}
+d
+d.items()
+d.iteritems()
+for k,v in d.iteritems(): print k, v
+for k,v in d.viewitems(): print k, v
+for k,v in d.viewitems(): v=None; print k, v
+d
+dict?
+EP_TYPES_CONV
+s=''
+s.replace?
+import re
+re.findall?
+re.findall('sf(\d+)_blk_(\d+)', 'sf1234_blk_123')
+strings
+print strings
+print strings[0]
+print strings[1]
+from plumbum.cmd import which
+which('numdiff')
+from plumbum.cmd import which
+which('numdiff')
+which('numdi')
+from plumbum.cmd import toto
+from plumbum.cmd import numdiff
+ls
+numdiff['results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp']
+numdiff('results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp')
+numdiff('-SQ', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp')
+numdiff('-Sq', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp')
+from plumbum.cmd import diff
+diff('-I "^ZONE"', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp')
+diff("-I \"^ZONE\"", 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp')
+diff("-I \"^ZONE.*\"", 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp')
+from plumbum.cmd import diff
+diff('results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp')
+diff('-I "^ZONE.*"', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp')
+diff('-I="^ZONE.*"', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp')
+from plumbum.cmd import diff
+diff('-I', '"^ZONE.*"', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp')
+diff('-I', '"^ZONE"', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp')
+diff('-I', '"^ZONE.*"', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp')
+diff('-I', '"^ZONE"', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp')
+diff('-I', '"^ZONE"', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp')
+diff('-I', '"^ZONE"', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp')
+from subprocess import check_output
+check_output?
+check_output(['/usr/bin/diff', '-I', '"^ZONE"', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp'])
+print check_output(['/usr/bin/diff', '-I', '"^ZONE"', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp'])
+ check_call(['/usr/bin/diff', '-I', '"^ZONE"', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp'])
+check_call(['/usr/bin/diff', '-I', '"^ZONE"', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp'])
+import subprocess
+subprocess.check_call(['/usr/bin/diff', '-I', '"^ZONE"', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp'])
+import os
+os.system('diff -I "^ZONE" results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp results-fsui/oat15/RESIDUAL/resicoeffp.tp')
+subprocess.check_call(['/usr/bin/diff', '-I', '^ZONE', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp'])
+diff('-I', '^ZONE', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp')
+x=diff('-I', '^ZONE', 'results-ref/oat15/elsa/RESIDUAL/resicoeffp.tp', 'results-fsui/oat15/RESIDUAL/resicoeffp.tp')
+if x: print 'XXX'
+x == ''
+from plumbum import local
+local.cwd
+x=local.cwd
+x.getpath
+x.getpath()
+x.getpath?
+import filecmp
+filecmp.cmp.__file__
+filecmp.cmp.__doc__
+filecmp.cmp.__code__
+__dict__
+filecmp.__dict__
+import filecmp
+filecmp.__dict__
+filecmp.__builtins__
+filecmp.__dict__
+locals()
+__file__
+globals()
+__dict__
+filecmp.__dict__
+import filecmp
+filecmp.__dict__
+q
+import filecmp
+filecmp.__dict__
+globals()
+locals()
+import filecmp
+filecmp._cmp.__get__?
+filecmp._cmp.__get__('cmp')
+filecmp._cmp.__getattribute__?
+filecmp._cmp.__getattribute__('cmp')
+filecmp._cmp.__dict__
+filecmp._cmp.__globals__
+filecmp._cmp.__
+locals()
+filecmp._cmp.__q
+cmp
+cmp?
+ll
+import mpi4py
+mpi4py.__file__
+from mpi4py import MPI
+import elsA_user as e
+import numpy
+numpy.version
+numpy.version()
+print numpy.version
+print numpy.version.version
+import pudb
+pudb.VERSION
+import nose
+import plumbum
+casePath
+destination
+print destination
+import plumbum
+from plumbum import local
+local['/home/ng1154e/scratch/fsui/fsui/bin/fsui.exe']
+fsui = local['/home/ng1154e/scratch/fsui/fsui/bin/fsui.exe']
+fsui('prepare')
+fsui = local['/home/ng1154e/scratch/fsui/fsui/bin/fsui.ex']
+fsui = local['/home/ng1154e/scratch/fsui/fsui/bin/fsui.exe']
+import fnmatch
+fnmatch.fnmatch?
+fnmatch.fnmatch('toto', 'toto')
+q
+importre
+import re
+re.sub?
+re.sub(r'[\t ]*:[\t ]*', ':', 'X: Y')
+re.sub(r'[\t ]*:[\t ]*', ':', 'X:   Y')
+re.sub(r'[\t ]*:[\t ]*', ':', 'X: \t  Y')
+re.sub(r'[\t ]*:[\t ]*', ':', 'X\t \t: \t  Y')
+re.sub(r'[\t ]*([,:])[\t ]*', ':', 'X\t \t: \t  Y')
+re.sub(r'[\t ]*([,:])[\t ]*', '\1', 'X\t \t: \t  Y')
+re.sub(r'[\t ]*([,:])[\t ]*', r'\1', 'X\t \t: \t  Y')
+re.sub(r'[\t ]*([,:])[\t ]*', r'\1', 'X\t \t: \t  Y\t , \t \t0 :1')
+s=''
+s.replace?
+'-.'.replace('.-', '_')
+'-.'.replace('-', '_')
+import re
+re.sub?
+re.sub(r'-.', r'_', 'toto-tsd.twjh')
+re.sub(r'[-.]', r'_', 'toto-tsd.twjh')
+s
+s.replace('', 'X')
+s
+class x(object): x=None
+y=2
+class x(object): y=None
+y=2
+class x(object): y=y
+x.y
+self._tests
+list(self._tests)
+q
+import re
+re.findall?
+ re.findall(r'^(\w)*:(\w)*', 'k:v,x:y,w:z')
+re.findall(r'^(\w)*:(\w)*', 'k:v,x:y,w:z')
+re.findall(r'((\w)*:(\w)*)*', 'k:v,x:y,w:z')
+re.findall(r'^(\w)*:(\w)*,', 'k:v,x:y,w:z')
+re.findall(r'(\w)*:(\w)*,', 'k:v,x:y,w:z')
+re.findall(r'(\w)*:(\w)*,?', 'k:v,x:y,w:z')
+re.findall(r'(\w)*:(\w)*,?', 'k')
+re.findall(r'(\w)*:(\w)*,?|(\w)+', 'k')
+re.findall(r'(\w)*:(\w)*,?', 'k')
+re.findall(r'(\w)*:(\w)*,?', 'k:v,x:y,w:z')
+re.findall(r'(\w)*:(\w)*,?', 'k:v,x:y')
+re.findall(r'(\w)*:(\w)*,?', 'k:v,x:')
+re.findall(r'(\w)*:(\w)*,?', 'k:v,x')
+re.findall(r'(\w)*:(\w)*,?', 'k,x')
+re.findall(r'(\w)*:(\w)*,?', 'k,x:y')
+re.findall(r'(\w)*:(\w)*,?', 'k:v,x:y,w:z')
+re.findall(r'(\w)+:(\w)*:(\w)*,?', 'k:v,x:y,w:z')
+re.findall(r'(\w)+(:(\w)*:(\w)*,?)', 'k:v,x:y,w:z')
+re.findall(r'(\w)+:(\w)*:(\w)*,?)', 'k:v,x:y,w:z')
+re.findall(r'(\w)+:(\w)*:(\w)*,?', 'k:v,x:y,w:z')
+re.findall(r'(\w)+:', 'k:v,x:y,w:z')
+re.findall(r'^(\w)+:', 'k:v,x:y,w:z')
+re.findall(r'^(\w)+:(\w)*', 'k:v,x:y,w:z')
+re.findall(r'^(\w)+:(\w)*', 'k:v')
+re.findall(r'^(\w)+:(\w)*', 'k:')
+re.findall(r'^(\w)+:(\w)*', 'k')
+re.findall(r'^(\w)+(:(\w)*)', 'k')
+re.findall(r'^(\w)+(:(\w)*)?', 'k')
+re.findall(r'^(\w)+(?::(\w)*)?', 'k')
+re.findall(r'^(\w)+(?::(\w)*)', 'k')
+re.findall(r'^(\w)+(?::(\w)*(?:(\w)+:(\w)+)?)?', 'k')
+re.findall(r'^(\w)+(?::(\w)*(?:(\w)+:(\w)+)*)?', 'k')
+re.findall(r'^(\w)+(?::(\w)*(?:(\w)+:(\w)+)*)?', 'k:v,x:y,w:z')
+re.findall(r'^(\w)+(?::(\w)*(?::(\w)+:(\w)+)*)?', 'k:v,x:y,w:z')
+re.findall(r'^(\w)+(:(\w)*)?', 'k')
+re.findall(r'^(\w)+(?::(\w)*)?', 'k')
+re.findall(r'^(\w)+(?::(\w)*)?', 'k:v')
+re.findall(r'^(\w)+(?::(\w)*)?', 'k:')
+re.findall(r'(\w)*:(\w)*,?', 'k:v,x:y,w:z'
+)
+re.findall(r'(\w)*:(\w)*,?', 'k:v,x:y,w:z')
+re.findall(r'(\w)*:(\w)*,?', 'k:v,x:y,w:')
+re.findall(r'(\w)+:(\w)+,?', 'k:v,x:y,w:')
+re.findall(r'((\w)+:(\w)+),?', 'k:v,x:y,w:')
+re.findall(r'(\w)+:(\w)+,?', 'k:v,x:y,w:')
+re.findall(r'(\w)+:(\w)*,?', 'k:v,x:y,w:')
+re.findall(r'(\w)*:(\w)*,?', 'k:v,x:y,w:')
+re.findall(r'(\w)*:(\w)*,?', 'k:v,x:y,')
+re.findall(r'(\w)*:(\w)*,?', 'k:v,:y,')
+re.findall(r'(\w)*:(\w)*,?', 'k:v')
+re.findall(r'(\w)*:(\w)*,?', 'k:')
+re.findall(r'(\w)*:(\w)*,?', 'k')
+re.findall(r'(\w)*(?::(\w)*,?)', 'k')
+re.findall(r'(\w)*(?::(\w)*,?)*', 'k')
+re.findall(r'(\w)*:(\w)*,?', 'k')
+re.findall(r'(\w)*:(\w)*,?', 'k:v')
+re.findall(r'(\w)*:(\w)*,?', 'k')
+re.findall(r'(\w)+|(\w)*:(\w)*,?', 'k')
+re.findall(r'(\w)+|((\w)*:(\w)*,?)*', 'k')
+re.findall(r'(\w)+|(\w)*:(\w)*,?', 'k')
+re.findall(r'((\w)+)|((\w)*:(\w)*,?)', 'k')
+re.findall(r'(\w[^:])+|(\w)*:(\w)*,?', 'k')
+re.findall(r'\w[^:]+|(\w)*:(\w)*,?', 'k')
+re.findall(r'(\w[^:])+|(\w)*:(\w)*,?', 'k')
+re.findall(r'(\w[^:])+|(\w)*:(\w)*,?', 'k:v')
+re.findall(r'(\w[^:])+|(\w)*:(\w)*,?', 'k')
+re.findall(r'^(\w[^:])+|(\w)*:(\w)*,?', 'k')
+re.findall(r'(\w)+|((\w)*:(\w)*,?)*', 'k')
+re.findall(r'^(\w)+|((\w)*:(\w)*,?)*', 'k')
+re.findall(r'^(\w)+|^((\w)*:(\w)*,?)*', 'k')
+re.findall(r'^(\w)+', 'k')
+re.findall(r'^(\w)+|^((\w)*:(\w)*,?)*', 'k')
+re.findall(r'^[^:]+|^((\w)*:(\w)*,?)*', 'k')
+re.findall(r'^([^:]+)|^((\w)*:(\w)*,?)*', 'k')
+re.findall(r'^(([^:]+)|((\w)*:(\w)*,?)*)', 'k')
+re.find(r'^(([^:]+)|((\w)*:(\w)*,?)*)', 'k')
+re.match?
+re.match(r'^(([^:]+)|((\w)*:(\w)*,?)*)', 'k')
+r=re.match(r'^(([^:]+)|((\w)*:(\w)*,?)*)', 'k')
+re.findall(r'^([^:]+|(\w)*:(\w)*,?)*)', 'k')
+re.findall(r'^([^:]+|((\w)*:(\w)*,?)*)', 'k')
+re.findall(r'^(((\w)*:(\w)*,?)*)|[^:]+)', 'k')
+re.findall(r'^((\w)*:(\w)*,?)*)|[^:]+)', 'k')
+re.findall(r'^([^:]+)|((\w)*:(\w)*,?)*)', 'k')
+re.findall(r'^([^:]+)|((\w)*:(\w)*,?)*', 'k')
+re.findall(r'^([^:]+)|(((\w)*:(\w)*,?)*)', 'k')
+re.findall(r'^([^:]+)|((\w)*:(\w)*,?)*', 'k')
+re.findall(r'^([^:]+)|((\w)*:(\w)*(?:,|$)*', 'k')
+re.findall(r'^([^:]+)|(\w)*:(\w)*(?:,|$)*', 'k')
+re.findall(r'^([^:]+)|((\w)*:(\w)*)*(?:,|$)', 'k')
+re.findall(r'^(([^:]+)|((\w)*:(\w)*)*(?:,|$))', 'k')
+re.findall(r'^([^:]+)|((\w)*:(\w)*)*(?:,|$)', 'k')
+re.findall(r'^([^:]+)|((\w)+:(\w)+)*(?:,|$)', 'k')
+re.findall(r'^([^:]+)|((\w)+:(\w)+)+(?:,|$)', 'k')
+re.findall(r'^([^:]+)|(\w)+:(\w)+)(?:,|$)', 'k')
+re.findall(r'^([^:]+)|(\w)+:(\w)+(?:,|$)', 'k')
+re.findall(r'^([^:]+)$|(\w)+:(\w)+(?:,|$)', 'k')
+re.findall(r'^([^:]+)|((\w)+:(\w)+(?:,|$))+', 'k')
+re.findall(r'^([^:]+)|(([^:])+:([^:]+)+(?:,|$))+', 'k')
+re.findall(r'^[^:]+|(([^:])+:([^:]+)+(?:,|$))+', 'k')
+re.findall(r'^([^:]+)|(([^:])+:([^:]+)+(?:,|$))+', 'k')
+re.findall(r'^(([^:]+)|(([^:])+:([^:]+)+(?:,|$))+)', 'k')
+re.findall(r'^([^:]+)|(([^:])+:([^:]+)+(?:,|$))+', 'k')
+re.findall(r'^([^:]+)|(([^:]+):([^:]+)(?:,|$))+', 'k')
+re.findall(r'^([^:]+)|(([^:]+):([^:]+)[,$])+', 'k')
+re.findall(r'^(([^:]+))|(([^:]+):([^:]+)[,$])+', 'k')
+re.findall(r'^([^:]+)|(([^:]+):([^:]+)[,$])+', 'k')
+re.findall(r'^([^:]+)|(([^:]+):([^:]+)[,$])+', 'k:v')
+re.findall(r'^[^:]+', 'k:v')
+re.findall(r'^[^:]+$', 'k:v')
+re.findall(r'^([^:]+)$|(([^:]+):([^:]+)[,$])+', 'k:v')
+re.findall(r'^([^:]+)$|(([^:]+):([^:]+)[,$])+', 'k')
+re.findall(r'^([^:]+)$|(([^:]+):([^:]+)[,$])+', 'k:v')
+re.findall(r'^(([^:]+):([^:]+)[,$])+', 'k:v')
+re.findall(r'^(([^:]+):([^:]+)(?:,|$)+', 'k:v')
+re.findall(r'^(([^:]+):([^:]+)(?:,|$))+', 'k:v')
+re.findall(r'(([^:]+):([^:]+)(?:,|$))+', 'k:v')
+re.findall(r'([^:]+):([^:]+)(?:,|$)', 'k:v')
+re.findall(r'([^:]+):([^:]+)(?:,|$)', 'k:v,x:y')
+re.findall(r'([^:]+):([^:]+)(?:,|$)', 'k:v,x:')
+re.findall(r'([^:]+):([^:]+)(?:,|$)', 'k:v,:x:')
+re.findall(r'([^:]+):([^:]+)(?:,|$)', 'k:v,:x')
+re.findall(r'([^:]+):([^:]+)[,$]', 'k:v,:x')
+re.findall(r'([^:]+):([^:]+)[,$]', 'k:v,:x,w:z')
+re.findall(r'([^:]+):([^:]+)[,$]', 'k:v,y:x,w:z')
+re.findall(r'([^:]+):([^:]+)(?:,|$)', 'k:v,y:x')
+re.findall(r'([^:]+):([^:]+)(?:,|$)', 'k:v,y:x,w:z')
+re.findall(r'(\w+):([^:]+)(?:,|$)', 'k:v,y:x,w:z')
+re.findall(r'(\w+):(\w+)(?:,|$)', 'k:v,y:x,w:z')
+re.findall(r'(\w+):(\w+)(?:,|$)', 'k:v,y:x,w:')
+re.findall(r'(\w+):(\w+)(?:,|$)', 'k:v,:x,w:')
+re.findall(r'(\w+):(\w+)(?:,|$)', 'k')
+re.findall(r'(\w+):(\w+)(?:,|$)', 'k:v')
+re.findall(r'(\w+):(\w+)(?:,|$)', 'k:v,x:y')
+0,1 == 0,1
+(0,1) == (0,1)
+from mpi4py import MPI
+from elsA_user import *
+import elsA_user as e
+e.cfdpb.get_nb_block?
+import plumbum
+plumbum.local.env
+plumbum.local.env['PATH']
+import plumbum
+plumbum.version
+sum([[0],[1],[2]], [])
+set(sum([[0],[1],[0]], []))
+import itertools
+set(itertools.chain([[0],[1],[0]]))
+set(itertools.chain([0],[1],[0]))
+    FLOWSTATE_CHOOSER = {
+        ('Mach', 'Temperature', 'Reynolds'):
+                FlowStateLaminarMTR,
+            ('Mach', 'Pressure', 'Temperature'):
+                    FlowStateLaminarMPT,
+                ('Mach', 'PressureStagnation', 'TemperatureStagnation'):
+                        FlowStateLaminarMPTStagnation,
+                }
+        ('Mach', 'Temperature', 'Reynolds'):
+                None,
+            ('Mach', 'Pressure', 'Temperature'):
+                    None,
+                ('Mach', 'PressureStagnation', 'TemperatureStagnation'):
+                        None,
+                }
+FS=        ('Mach', 'Temperature', 'Reynolds'):
+                None,
+            ('Mach', 'Pressure', 'Temperature'):
+                    None,
+                ('Mach', 'PressureStagnation', 'TemperatureStagnation'):
+                        None,
+                }
+FS= ('Mach', 'Temperature', 'Reynolds'):
+                None,
+            ('Mach', 'Pressure', 'Temperature'):
+                    None,
+                ('Mach', 'PressureStagnation', 'TemperatureStagnation'): None,
+                }
+FS={ ('Mach', 'Temperature', 'Reynolds'):
+                None,
+            ('Mach', 'Pressure', 'Temperature'):
+                    None,
+                ('Mach', 'PressureStagnation', 'TemperatureStagnation'): None,
+                }
+fs
+FS
+set(itertools.chain(FS.keys()))
+set(itertools.chain(*FS.keys()))
+set(itertools.chain(*FS))
+print set(0, 1, 2)
+print set([0, 1, 2])
+repr(set([0, 1, 2]))
+kw={0:0,1:1}
+kw
+filter(kw.viewkeys().issuperset, [set([1,2]), set([0]))
+filter(kw.viewkeys().issuperset, [set([1,2]), set([0])])
+tuple?
+i=0
+i.toto()
+AttributeError?
+AttributeError('toto')
+print AttributeError('toto')
+import itertools
+itertools.product(set([0,1]), set([2,3]))
+print itertools.product(set([0,1]), set([2,3]))
+list(itertools.product(set([0,1]), set([2,3])))
+import itertools
+list(itertools.product(set([0,1]), set([2,3])))
+list(itertools.product(set([0,1]), set([])))
+lsit?
+list?
+getattr(None, 'toto')
+importplumbum
+import plumbum
+'d.d.d'.split?
+s='d.d.d'
+s.split?
+s.split('.',1)
+'a'.split('.',1)
+110.4/273.
+constants.ToDict()
+ReferenceState
+ReferenceState.ToDict()
+q
+d
+from quantities import Quantitites
+from quantities import Quantities
+ll
+import quantities
+from fsui.normalizer.flowstate.quantities import Quantities
+q=Quantities()
+q
+q=Quantities(x=0)
+q
+Quantities.INPUTS = ('X')
+q=Quantities(x=0)
+q=Quantities(X=0)
+q
+from fsui.normalizer.flowstate.quantities import Quantities
+Quantities.INPUTS = ('X')
+q=Quantities(X=0)
+q
+q.y
+from fsui.normalizer.flowstate.quantities import Quantities
+Quantities.INPUTS = ('x')
+q=Quantities(x=0)
+q
+q.y
+from fsui.normalizer.flowstate.quantities import Quantities
+Quantities.INPUTS = ('x')
+q=Quantities(x=0)
+q
+q.y
+q
+from fsui.normalizer.flowstate.quantities import Quantities
+Quantities.INPUTS = ('x')
+q=Quantities(x=0)
+q
+q.x
+q.y
+q.x = 0.
+q.y
+q=Quantities(x=0)
+q.y
+setattr?
+from fsui.normalizer.flowstate.quantities import Quantities
+Quantities.INPUTS = ('x')
+q
+q=Quantities(x=0)
+q
+q.x
+self.x
+q
+self.x
+self.OUTPUTS
+import posixpath
+posixpath.sep
+section.name
+section
+print section.name
+import re
+s=FlowSolverBCType = BCEngineInlet_MassFlow_NS  : elsa.boundary.type = outmfr2 (ns)
+FlowSolverBCType = BCEngineInlet_Pressure     : elsa.boundary.type = outpres (riemann)
+s='''FlowSolverBCType = BCEngineInlet_MassFlow_NS  : elsa.boundary.type = outmfr2 (ns)
+FlowSolverBCType = BCEngineInlet_Pressure     : elsa.boundary.type = outpres (riemann)
+'''
+_mappingCleanUpPattern = (r'[\t ]*([,=])[\t ]*', r'\1')
+newstring = re.sub(_mappingCleanUpPattern[0],
+                           _mappingCleanUpPattern[1],
+                           string)
+newstring = re.sub(_mappingCleanUpPattern[0],
+                           _mappingCleanUpPattern[1],
+                           s)
+newstring
+self.INPUTS
+d
+dict.setdefault?
+110.4 / 0.5088
+110.4 / 0.37
+110.4 / 0.38
+110.4 / 0.397
+110.4 / 0.502719254
+110.4 / 0.956
+110.4 / 0.397
+110.4 / 0.368
+110.4 / 0.465
+110.4 / 0.397
+298.3783783783784
+298.3783783783784 * 1.1394
+298.3783783783784 * 2.4580
+298.3783783783784 * 1.8631
+0.5*0.5/2
+*0.4
++1
+1+0.5*0.5*0.4/2
+1.05*339.97232432432435
+339.97232432432435 / 1.05
+0.85**2
+1.+0.85**2/2
+1.1394 * 1.36125 * 298.3783783783784
+1.+0.5**2/2
+1.1394 * 1.36125 * 298.3783783783784 / 1.125
+1.+0.4*0.85**2
+1.+0.2*0.85**2
+1.+0.2*0.5**2
+298.3783783783784 * 1.05 / (1.1445*1.1394)
+1.+0.2*0.85**2
+1.+0.2*0.5**2
+ 1.05 / (1.1445*1.1394)
+1.05 / (1.1445*1.1394)
+s='PluginsSectionHandler'
+s
+s.split('SectionHandler')
+s.replace('SectionHandler', '')
+s
+from FSDataManager import FSParameter
+import FSDM
+from FSDataManager import FSParameter
+p=FSParameter('toto', 'value')
+p
+print p
+self.__module__
+s=''
+s.startswith('')
+s='faertrtg'
+s.startswith('')
+s.startswith('g')
+self.__name
+import plumbum
+import mpi4py
+import plumbum
+import FSDM
+import FSDamasIO
+import FSDataManager
+import FSDamasIO
+from FSDamasIO import FSMesh
+import plumbum
+self.OUTPUTS
+self.INPUTS
+dir(self)
+q
+self
+self.mro
+self.__class__.mro
+self.__class__.mro()
+cls.mro()
+self.__class__.mro()
+getattr(proc, "_timed_out", False)
+run .ycm_extra_conf.py
+p flags
+flags
+import yss
+sys
+sys.path
+self.grammarDirPath
+import sys
+sys.path
+from mpi4py import MPI
+import elsA_user
+import sys
+sys.path
+import sys
+sys.modules
+q
