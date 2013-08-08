@@ -1,24 +1,21 @@
 set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+Bundle 'Solarized'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-sleuth'
+Bundle 'tpope/vim-unimpaired'
+Bundle 'kien/ctrlp.vim'
+Bundle 'SirVer/ultisnips'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'scrooloose/syntastic'
+
 filetype indent plugin on
 syntax on
-
-" VAM install location:
-let plugin_root_dir = expand('$HOME/.vim/vim-addons')
-
-let &rtp.=(empty(&rtp)?'':',').plugin_root_dir.'/vim-addon-manager'
-
-call vam#ActivateAddons([
-\ 'Solarized',
-\ 'unimpaired',
-\ 'UltiSnips',
-\ 'sleuth', 
-\ 'ctrlp',
-\ 'Syntastic',
-\ 'Powerline',
-\ 'tComment',
-\ 'YouCompleteMe',
-\ 'python%790'],
-\ {'auto_install' : 0})
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -26,13 +23,13 @@ call vam#ActivateAddons([
 set t_Co=16 " Explicitly tell Vim that the terminal supports 16 colors
 
 " let g:solarized_termcolors=256
-colorscheme solarized
-" set background=light
 set background=dark
+" set background=light
+colorscheme solarized
 
 
-set number
 " set ruler       " show the cursor position all the time
+set number
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
 set incsearch       " do incremental searching
 set hlsearch   " switch on highlighting the last used search pattern.
@@ -117,10 +114,10 @@ au BufRead,BufNewFile *.fsui setlocal tabstop=8 expandtab shiftwidth=4 softtabst
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " supertab
-let g:SuperTabDefaultCompletionType = "context"
-let g:SuperTabLongestEnhanced = 1
-let g:SuperTabLongestHighlight = 1
-set completeopt=menuone,longest,preview
+" let g:SuperTabDefaultCompletionType = "context"
+" let g:SuperTabLongestEnhanced = 1
+" let g:SuperTabLongestHighlight = 1
+" set completeopt=menuone,longest,preview
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " powerline
@@ -133,10 +130,8 @@ let g:Powerline_colorscheme = 'solarized'
 let g:syntastic_mode_map = { 'mode': 'active',
                            \ 'active_filetypes': ['python'],
                            \ 'passive_filetypes': [] }
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-" let g:syntastic_error_symbol='X'
-" let g:syntastic_warning_symbol='!'
+let g:syntastic_error_symbol='E'
+let g:syntastic_warning_symbol='W'
 " let g:syntastic_auto_loc_list=2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -150,7 +145,7 @@ let g:ctrlp_extensions = ['tag']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-jedi
-let g:jedi#use_tabs_not_buffers = 1
+" let g:jedi#use_tabs_not_buffers = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ultisnip
