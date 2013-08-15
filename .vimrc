@@ -13,9 +13,94 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'SirVer/ultisnips'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'scrooloose/syntastic'
+Bundle 'hdima/python-syntax'
 
-filetype indent plugin on
-syntax on
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" tpope/sensible.vim
+
+if has('autocmd')
+  filetype plugin indent on
+endif
+if has('syntax') && !exists('g:syntax_on')
+  syntax enable
+endif
+
+" Use :help 'option' to see the documentation for the given option.
+
+set autoindent
+set backspace=indent,eol,start
+set complete-=i
+set showmatch
+set smarttab
+
+set nrformats-=octal
+set shiftround
+
+set ttimeout
+set ttimeoutlen=50
+
+set incsearch
+" Use <C-L> to clear the highlighting of :set hlsearch.
+if maparg('<C-L>', 'n') ==# ''
+  nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+endif
+
+set laststatus=2
+set ruler
+set showcmd
+set wildmenu
+
+if !&scrolloff
+  set scrolloff=1
+endif
+if !&sidescrolloff
+  set sidescrolloff=5
+endif
+set display+=lastline
+
+if &encoding ==# 'latin1' && has('gui_running')
+  set encoding=utf-8
+endif
+
+if &listchars ==# 'eol:$'
+  set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+  if !has('win32') && (&termencoding ==# 'utf-8' || &encoding ==# 'utf-8')
+    let &listchars = "tab:\u21e5 ,trail:\u2423,extends:\u21c9,precedes:\u21c7,nbsp:\u00b7"
+  endif
+endif
+
+if &shell =~# 'fish$'
+  set shell=/bin/bash
+endif
+
+set autoread
+set fileformats+=mac
+
+if &history < 1000
+  set history=1000
+endif
+if &tabpagemax < 50
+  set tabpagemax=50
+endif
+if !empty(&viminfo)
+  set viminfo^=!
+endif
+
+" Allow color schemes to do bright colors without forcing bold.
+if &t_Co == 8 && $TERM !~# '^linux'
+  set t_Co=16
+endif
+
+" Load matchit.vim, but only if the user hasn't installed a newer version.
+if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
+  runtime! macros/matchit.vim
+endif
+
+inoremap <C-U> <C-G>u<C-U>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"filetype indent plugin on
+"syntax on
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -28,12 +113,9 @@ set background=dark
 colorscheme solarized
 
 
-" set ruler       " show the cursor position all the time
 set number
-set backspace=indent,eol,start " allow backspacing over everything in insert mode
-set incsearch       " do incremental searching
 set hlsearch   " switch on highlighting the last used search pattern.
-set ignorecase
+" set ignorecase
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -77,9 +159,6 @@ set nobackup
 set nowritebackup
 set noswapfile
 
-" <Ctrl-l> redraws the screen and removes any search highlighting.
-nnoremap <silent> <C-l> :nohl<CR><C-l>
-
 " exit insert mode
 inoremap <C-c> <Esc>
 
@@ -88,25 +167,21 @@ inoremap <C-c> <Esc>
 
 " Use the same symbols as TextMate for tabstops and EOLs
 " set listchars=tab:▸\ ,eol:¬
-set listchars=tab:▸\ 
-" set listchars=
-set list
+"set listchars=tab:▸\ 
+"set list
 
 " indentation
 set smartindent
-set autoindent
 
-" keep the cursor centered in the window
-set scrolloff=10
+set completeopt=menuone,longest,preview
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " python
 au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4 textwidth=79
-" For full syntax highlighting
 let python_highlight_all=1
+let python_version_2 = 1
 " Folding based on indentation
 " set foldmethod=indent
-let g:python_version_2 = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " .fsui stuff
@@ -117,12 +192,11 @@ au BufRead,BufNewFile *.fsui setlocal tabstop=8 expandtab shiftwidth=4 softtabst
 " let g:SuperTabDefaultCompletionType = "context"
 " let g:SuperTabLongestEnhanced = 1
 " let g:SuperTabLongestHighlight = 1
-" set completeopt=menuone,longest,preview
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " powerline
 set laststatus=2   " Always show the statusline
-set encoding=utf-8 " Necessary to show Unicode glyphs
+"set encoding=utf-8 " Necessary to show Unicode glyphs
 let g:Powerline_colorscheme = 'solarized'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
