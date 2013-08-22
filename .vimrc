@@ -4,7 +4,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 
-Bundle 'Solarized'
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-sleuth'
@@ -97,21 +97,15 @@ if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
 endif
 
 inoremap <C-U> <C-G>u<C-U>
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"filetype indent plugin on
-"syntax on
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "colorscheme
 set t_Co=16 " Explicitly tell Vim that the terminal supports 16 colors
 
-" let g:solarized_termcolors=256
-set background=dark
 " set background=light
+set background=dark
 colorscheme solarized
-
+" let g:solarized_termcolors=256
 
 set number
 set hlsearch   " switch on highlighting the last used search pattern.
@@ -188,12 +182,6 @@ let python_version_2 = 1
 au BufRead,BufNewFile *.fsui setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" supertab
-" let g:SuperTabDefaultCompletionType = "context"
-" let g:SuperTabLongestEnhanced = 1
-" let g:SuperTabLongestHighlight = 1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " powerline
 set laststatus=2   " Always show the statusline
 "set encoding=utf-8 " Necessary to show Unicode glyphs
@@ -216,10 +204,6 @@ let g:ctrlp_max_height = 30
 let g:ctrlp_extensions = ['tag']
 :nmap <C-B> :CtrlPBuffer<CR>
 :nmap <C-T> :CtrlPTag<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-jedi
-" let g:jedi#use_tabs_not_buffers = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ultisnip
