@@ -6,7 +6,6 @@ Bundle 'gmarik/vundle'
 
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-sleuth'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'kien/ctrlp.vim'
@@ -14,6 +13,8 @@ Bundle 'SirVer/ultisnips'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'hdima/python-syntax'
+Bundle 'matze/vim-move'
+Bundle 'bling/vim-airline'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tpope/sensible.vim
@@ -138,12 +139,12 @@ inoremap <left> <nop>
 inoremap <right> <nop>
 
 " line motion
-nnoremap <C-j> :m .+1<CR>==
-nnoremap <C-k> :m .-2<CR>==
-inoremap <C-j> <Esc>:m .+1<CR>==gi
-inoremap <C-k> <Esc>:m .-2<CR>==gi
-vnoremap <C-j> :m '>+1<CR>gv=gv
-vnoremap <C-k> :m '<-2<CR>gv=gv
+" nnoremap <C-j> :m .+1<CR>==
+" nnoremap <C-k> :m .-2<CR>==
+" inoremap <C-j> <Esc>:m .+1<CR>==gi
+" inoremap <C-k> <Esc>:m .-2<CR>==gi
+" vnoremap <C-j> :m '>+1<CR>gv=gv
+" vnoremap <C-k> :m '<-2<CR>gv=gv
 
 " Source the vimrc file after saving it
 au bufwritepost .vimrc source $MYVIMRC
@@ -180,12 +181,6 @@ let python_version_2 = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " .fsui stuff
 au BufRead,BufNewFile *.fsui setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" powerline
-set laststatus=2   " Always show the statusline
-"set encoding=utf-8 " Necessary to show Unicode glyphs
-let g:Powerline_colorscheme = 'solarized'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic
@@ -237,3 +232,18 @@ function! g:UltiSnips_Complete()
 endfunction
 
 au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-move
+let g:move_key_modifier = 'C'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-airline
+let g:airline_left_sep = ''
+let g:airline_right_sep = ''
+" let g:airline_linecolumn_prefix = '¶ '
+let g:airline#extensions#branch#symbol = '⎇ '
+" let g:airline#extensions#paste#symbol = 'ρ'
+" let g:airline#extensions#paste#symbol = 'Þ'
+let g:airline#extensions#paste#symbol = '∥'
+" let g:airline#extensions#whitespace#symbol = 'Ξ'
