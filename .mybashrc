@@ -13,10 +13,10 @@ stty ixoff -ixon
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias l='ls -AFG --color'
-alias ll='ls -AFGl --color'
+alias l='ls -AFGh --color'
+alias ll='ls -AFGlh --color'
 alias kk='ll'
-alias lt='ls -AFGlrt --color'
+alias lt='ls -AFGlrth --color'
 alias h='history'
 alias j="jobs -l"
 alias pu="pushd"
