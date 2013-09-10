@@ -5,7 +5,7 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="antoine"
+ZSH_THEME="my"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -33,7 +33,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(colored-man pip python history-substring-search autojump)
-# plugins=(git colored-man pip python history-substring-search autojump)
+plugins=(git colored-man pip python history-substring-search autojump)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -41,3 +41,23 @@ source $ZSH/oh-my-zsh.sh
 HISTFILE=$HOME/.zsh_history
 
 zstyle ':completion:*' hosts off
+
+# misc
+export GREP_OPTIONS='--color=auto --exclude=*\.svn*'
+
+export PAGER=less
+# export LESS='-MN'
+
+# python start file
+export PYTHONSTARTUP=~/dotfiles/.pythonrc
+
+include () { test -f "$1" && source "$1"; }
+
+################################################################################
+# MODULES
+if include ~/local/Modules/default/init/zsh ; then
+    module load scons/2.1.0
+    module load vim/7.3-918
+    module load git/1.8.2
+    module load bash-completion/1.3
+fi
