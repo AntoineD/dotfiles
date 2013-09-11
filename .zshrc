@@ -42,6 +42,10 @@ HISTFILE=$HOME/.zsh_history
 
 zstyle ':completion:*' hosts off
 
+# disable ctrl-s that freezes the shell
+stty ixany
+stty ixoff -ixon
+
 # misc
 export GREP_OPTIONS='--color=auto --exclude=*\.svn*'
 
@@ -63,17 +67,12 @@ if include ~/local/Modules/default/init/zsh ; then
 fi
 ################################################################################
 # alias
-# alias ..='cd ..'
-# alias ...='cd ../..'
-# alias ....='cd ../../..'
 alias l='ls -AFGh --color'
 alias ll='ls -AFGlh --color'
 alias kk='ll'
 alias lt='ls -AFGlrth --color'
 alias h='history'
 alias j="jobs -l"
-alias pu="pushd"
-alias po="popd"
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
