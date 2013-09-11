@@ -61,3 +61,24 @@ if include ~/local/Modules/default/init/zsh ; then
     module load git/1.8.2
     module load bash-completion/1.3
 fi
+################################################################################
+# alias
+# alias ..='cd ..'
+# alias ...='cd ../..'
+# alias ....='cd ../../..'
+alias l='ls -AFGh --color'
+alias ll='ls -AFGlh --color'
+alias kk='ll'
+alias lt='ls -AFGlrth --color'
+alias h='history'
+alias j="jobs -l"
+alias pu="pushd"
+alias po="popd"
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias dir='ls -ba'
+alias ss="ps -aux"
+alias dot='ls .[a-zA-Z0-9_]*'
+alias m="less"
+alias v="vim"
