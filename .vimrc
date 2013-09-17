@@ -122,6 +122,9 @@ if has('mouse')
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" do not history when leavy buffer
+set hidden
+
 " ctrl s to save
 noremap  <C-S> :update<CR>
 vnoremap <C-S> <C-C>:update<CR>
