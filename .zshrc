@@ -61,9 +61,9 @@ include () { test -f "$1" && source "$1"; }
 # MODULES
 if include ~/local/Modules/default/init/zsh ; then
     module load scons/2.1.0
-    module load vim/7.3-918
+    # module load vim/7.3-918
+    module load vim/7.4-027
     module load git/1.8.2
-    module load bash-completion/1.3
 fi
 ################################################################################
 # alias
