@@ -40,8 +40,11 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 HISTFILE=$HOME/.zsh_history
 
+# cvompletion
 zstyle ':completion:*' hosts off
+bindkey -M menuselect '^M' .accept-line
 
+################################################################################
 # disable ctrl-s that freezes the shell
 stty ixany
 stty ixoff -ixon
