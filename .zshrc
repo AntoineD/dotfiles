@@ -33,7 +33,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(colored-man pip python history-substring-search autojump)
-plugins=(git colored-man pip python history-substring-search autojump)
+plugins=(git colored-man pip python history-substring-search autojump dirpersist)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -64,7 +64,6 @@ include () { test -f "$1" && source "$1"; }
 # MODULES
 if include ~/local/Modules/default/init/zsh ; then
     module load scons/2.1.0
-    # module load vim/7.3-918
     module load vim/7.4-027
     module load git/1.8.2
 fi
