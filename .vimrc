@@ -16,6 +16,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'hdima/python-syntax'
 Bundle 'matze/vim-move'
 Bundle 'bling/vim-airline'
+Bundle 'hynek/vim-python-pep8-indent'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tpope/sensible.vim
@@ -176,7 +177,7 @@ set completeopt=menuone,longest,preview
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " python
-au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4 textwidth=79
+" au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4 textwidth=79
 let python_highlight_all=1
 let python_version_2 = 1
 " Folding based on indentation
