@@ -173,15 +173,16 @@ inoremap <C-c> <Esc>
 "set list
 
 " indentation
-set smartindent
+" set smartindent
 
 set completeopt=menuone,longest,preview
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " python
-" au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4 textwidth=79
-let python_highlight_all=1
-let python_version_2 = 1
+" au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4 textwidth=72 formatoptions=cq
+autocmd FileType python setlocal textwidth=72 formatoptions=cq
+let g:python_highlight_all=1
+let g:python_version_2 = 1
 " Folding based on indentation
 " set foldmethod=indent
 
