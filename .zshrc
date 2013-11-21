@@ -54,6 +54,9 @@ setopt hist_save_no_dups
 stty ixany
 stty ixoff -ixon
 
+# default file permissions
+umask u=rwx,g=rx,o=rx
+
 # misc
 export GREP_OPTIONS='--color=auto --exclude=*\.svn*'
 
