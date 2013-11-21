@@ -19,6 +19,7 @@ Bundle 'hdima/python-syntax'
 Bundle 'matze/vim-move'
 Bundle 'bling/vim-airline'
 Bundle 'hynek/vim-python-pep8-indent'
+Bundle 'osyo-manga/vim-over'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tpope/sensible.vim
@@ -242,6 +243,7 @@ let g:ycm_autoclose_preview_window_after_insertion = 1
 " 
 " au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
 " au BufEnter * exec "snoremap <silent> " . g:UltiSnipsExpandTrigger . " <Esc>:call UltiSnips_ExpandSnippetOrJump()<cr>"
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-move
 let g:move_key_modifier = 'C'
