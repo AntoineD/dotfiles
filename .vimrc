@@ -19,7 +19,9 @@ Bundle 'hdima/python-syntax'
 Bundle 'matze/vim-move'
 Bundle 'bling/vim-airline'
 Bundle 'hynek/vim-python-pep8-indent'
-Bundle 'osyo-manga/vim-over'
+" Bundle 'osyo-manga/vim-over'
+Bundle 'justinmk/vim-sneak'
+Bundle 'wellle/targets.vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tpope/sensible.vim
@@ -193,11 +195,13 @@ au BufRead,BufNewFile *.fsui setlocal tabstop=8 expandtab shiftwidth=4 softtabst
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic
-let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'active_filetypes': ['python'],
-                           \ 'passive_filetypes': [] }
 let g:syntastic_error_symbol='E'
 let g:syntastic_warning_symbol='W'
+let g:syntastic_style_error_symbol='SE'
+let g:syntastic_style_warning_symbol='SW'
+" let g:syntastic_mode_map = { 'mode': 'active',
+"                            \ 'active_filetypes': ['python'],
+"                            \ 'passive_filetypes': [] }
 " let g:syntastic_auto_loc_list=2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -259,3 +263,12 @@ let g:airline#extensions#branch#symbol = '⎇ '
 let g:airline#extensions#paste#symbol = '∥'
 " let g:airline#extensions#whitespace#symbol = 'Ξ'
 let g:airline#extensions#tabline#enabled = 1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-sneak
+" replace f with sneak
+" nmap f <Plug>Sneak_s
+" nmap F <Plug>Sneak_S
+" xmap f <Plug>Sneak_s
+" xmap F <Plug>Sneak_S
+" omap f <Plug>Sneak_s
+" omap F <Plug>Sneak_S
