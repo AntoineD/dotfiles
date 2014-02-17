@@ -1,10 +1,10 @@
 # https://github.com/blinks zsh theme
 
-function _prompt_char() {
-  if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
-    echo "%{%F{blue}%}±%{%f%k%b%}"
+function _git_prompt_switch() {
+  if [ -n "${NO_GIT_PROMPT}" ]; then
+      echo ''
   else
-    echo ' '
+      echo "$(git_prompt_info)"
   fi
 }
 
@@ -24,7 +24,11 @@ ZSH_THEME_GIT_PROMPT_DIRTY=" %{%F{red}%}*%{%f%k%b%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 PROMPT='%{%f%k%b%}
-%{%K{${bkg}}%B%F{green}%}%{%B%F{blue}%}%{%B%F{cyan}%}%m%{%B%F{green}%} %{%b%F{yellow}%K{${bkg}}%}%~%{%B%F{green}%}$(git_prompt_info)%E%{%f%k%b%}
-%{%K{${bkg}}%}$(_prompt_char)%{%K{${bkg}}%}%{%f%k%b%} '
+%{%K{${bkg}}%B%F{green}%}%{%B%F{blue}%}%{%B%F{cyan}%}%m%{%B%F{green}%} %{%b%F{yellow}%K{${bkg}}%}%~%{%B%F{green}%}$(_git_prompt_switch)%E%{%f%k%b%}
+%{%K{${bkg}}%}%{%K{${bkg}}%}%{%f%k%b%} '
+
+# PROMPT='%{%f%k%b%}
+# %{%K{${bkg}}%B%F{green}%}%{%B%F{blue}%}%{%B%F{cyan}%}%m%{%B%F{green}%} %{%b%F{yellow}%K{${bkg}}%}%~%{%B%F{green}%}$(git_prompt_info)%E%{%f%k%b%}
+# %{%K{${bkg}}%}$(_prompt_char)%{%K{${bkg}}%}%{%f%k%b%} '
 
 # RPROMPT='!%{%B%F{cyan}%}%!%{%f%k%b%}'
