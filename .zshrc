@@ -46,13 +46,13 @@ plugins=( \
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-HISTFILE=$HOME/.zsh_history
 
 # completion
 zstyle ':completion:*' hosts off
 bindkey -M menuselect '^M' .accept-line
 
-# ignore history duplicates
+# history settings
+export HISTFILE=$HOME/.zhistory
 setopt hist_find_no_dups
 setopt hist_ignore_all_dups
 setopt hist_save_no_dups
