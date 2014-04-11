@@ -20,9 +20,9 @@ Bundle 'hdima/python-syntax'
 Bundle 'matze/vim-move'
 Bundle 'bling/vim-airline'
 Bundle 'hynek/vim-python-pep8-indent'
-" Bundle 'osyo-manga/vim-over'
 Bundle 'justinmk/vim-sneak'
 Bundle 'wellle/targets.vim'
+" Bundle 'osyo-manga/vim-over'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tpope/sensible.vim
@@ -225,11 +225,15 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YCM
-nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>g :YcmCompleter GoTo<CR>
 nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
+nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
+nnoremap <F6> :YcmDiags<CR>
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_always_populate_location_list = 1
 
 " function! g:UltiSnips_Complete()
 "     call UltiSnips_ExpandSnippet()
