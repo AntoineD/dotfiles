@@ -1,28 +1,35 @@
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
 
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'tpope/vim-sleuth'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-abolish'
-Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-surround'
-Bundle 'kien/ctrlp.vim'
-Bundle 'SirVer/ultisnips'
-Bundle 'honza/vim-snippets'
-Bundle 'tomtom/tcomment_vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'hdima/python-syntax'
-Bundle 'matze/vim-move'
-Bundle 'bling/vim-airline'
-Bundle 'hynek/vim-python-pep8-indent'
-Bundle 'justinmk/vim-sneak'
-Bundle 'wellle/targets.vim'
-" Bundle 'osyo-manga/vim-over'
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vundle bootstrap
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#begin()
+Plugin 'gmarik/vundle'
+
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'tpope/vim-sleuth'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
+Plugin 'kien/ctrlp.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+Plugin 'tomtom/tcomment_vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'hdima/python-syntax'
+Plugin 'matze/vim-move'
+Plugin 'bling/vim-airline'
+Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'wellle/targets.vim'
+" Plugin 'justinmk/vim-sneak'
+" Plugin 'osyo-manga/vim-over'
+
+call vundle#end()
+filetype plugin indent on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tpope/sensible.vim
