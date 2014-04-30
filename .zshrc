@@ -81,7 +81,7 @@ include () { test -f "$1" && source "$1"; }
 if include ~/local/Modules/default/init/zsh ; then
     module load scons/2.1.0
     module load vim/7.4-183
-    module load git/1.8.2
+    module load git/1.9.2
 fi
 ################################################################################
 # alias
