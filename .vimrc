@@ -139,10 +139,20 @@ endif
 " do not history when leavy buffer
 set hidden
 
+" ctrl q to quit without saving
+noremap  <leader>q :quit<CR>
+vnoremap <leader>q <C-C>:quit<CR>
+inoremap <leader>q <Esc>:quit<CR>
+
+" ctrl w to delete buffer
+noremap  <leader>w :bdelete<CR>
+vnoremap <leader>w <C-C>:bdelete<CR>
+inoremap <leader>w <Esc>:bdelete<CR>
+
 " ctrl s to save
-noremap  <C-S> :update<CR>
-vnoremap <C-S> <C-C>:update<CR>
-inoremap <C-S> <Esc>:update<CR>
+noremap  <leader>s :update<CR>
+vnoremap <leader>s <C-C>:update<CR>
+inoremap <leader>s <Esc>:update<CR>
 
 " inoremap jk <Esc>
 
