@@ -198,6 +198,8 @@ inoremap <C-c> <Esc>
 
 set completeopt=menuone,longest,preview
 
+" use OS clipboard
+set clipboard^=unnamedplus
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " python
 " au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4 textwidth=72 formatoptions=cq
