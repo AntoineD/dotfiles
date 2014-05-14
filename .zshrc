@@ -59,8 +59,10 @@ setopt hist_save_no_dups
 
 ################################################################################
 # disable ctrl-s that freezes the shell
-stty ixany
-stty ixoff -ixon
+if [ -t 0 ]; then
+    stty ixany
+    stty ixoff -ixon
+fi
 
 # default file permissions
 umask u=rwx,g=rx,o=rx

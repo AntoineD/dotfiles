@@ -5,8 +5,10 @@ _PS1='\[\033[01;31m\]\h \[\033[01;34m\]\w\[\033[00m\]'
 PS1=$_PS1'\n'
 
 # disable ctrl-s that freezes the shell
-stty ixany
-stty ixoff -ixon
+if [ -t 0 ]; then
+    stty ixany
+    stty ixoff -ixon
+fi
 
 ################################################################################
 # alias
