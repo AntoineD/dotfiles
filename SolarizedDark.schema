@@ -1,6 +1,4 @@
-# VIM-recommended color schema for konsole
-
-# VIM (VI improved) in "help xiterm" recommends these colors for xterm.
+# inspired from github.com/phiggins/konsole-colors-solarized
 
 title SolarizedDark
 
