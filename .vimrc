@@ -287,6 +287,7 @@ let g:airline#extensions#branch#symbol = '⎇ '
 let g:airline#extensions#paste#symbol = '∥'
 " let g:airline#extensions#whitespace#symbol = 'Ξ'
 let g:airline#extensions#tabline#enabled = 1
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-sneak
 " replace f with sneak
