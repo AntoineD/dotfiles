@@ -208,9 +208,9 @@ let g:tex_flavor = "latex"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " python
 " au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4 textwidth=72 formatoptions=cq
-autocmd FileType python setlocal textwidth=72 formatoptions=cq
-let g:python_highlight_all=1
-let g:python_version_2 = 1
+" autocmd FileType python setlocal textwidth=72 formatoptions=cq
+" let g:python_highlight_all=1
+" let g:python_version_2 = 1
 " Folding based on indentation
 " set foldmethod=indent
 
