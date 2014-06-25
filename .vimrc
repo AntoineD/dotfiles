@@ -25,6 +25,8 @@ Plugin 'matze/vim-move'
 Plugin 'bling/vim-airline'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'wellle/targets.vim'
+Plugin 'LaTeX-Box-Team/LaTeX-Box'
+Plugin 'mileszs/ack.vim'
 " Plugin 'justinmk/vim-sneak'
 " Plugin 'osyo-manga/vim-over'
 
@@ -200,6 +202,9 @@ set completeopt=menuone,longest,preview
 
 " use OS clipboard
 set clipboard^=unnamedplus
+
+let g:tex_flavor = "latex"
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " python
 " au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4 textwidth=72 formatoptions=cq
@@ -253,7 +258,10 @@ let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_always_populate_location_list = 1
-
+let g:ycm_seed_identifiers_with_syntax = 1
+" let g:ycm_semantic_triggers = {
+"       \  'tex'  : ['{', '\'],
+"       \ }
 " function! g:UltiSnips_Complete()
 "     call UltiSnips_ExpandSnippet()
 "     if g:ulti_expand_res == 0
@@ -297,3 +305,9 @@ let g:airline#extensions#tabline#enabled = 1
 " xmap F <Plug>Sneak_S
 " omap f <Plug>Sneak_s
 " omap F <Plug>Sneak_S
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" latex box
+let g:LatexBox_quickfix = 2
+let g:LatexBox_show_warnings = 0
+let g:LatexBox_build_dir = './build'
