@@ -109,3 +109,7 @@ alias ss="ps -aux"
 alias dot='ls .[a-zA-Z0-9_]*'
 alias m="less"
 alias v="vim"
+
+################################################################################
+# local stuff
+include ~/.myrc
