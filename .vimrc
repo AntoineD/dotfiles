@@ -23,10 +23,12 @@ Plugin 'scrooloose/syntastic'
 Plugin 'hdima/python-syntax'
 Plugin 'matze/vim-move'
 Plugin 'bling/vim-airline'
+" Plugin 'itchyny/lightline.vim'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'wellle/targets.vim'
 Plugin 'LaTeX-Box-Team/LaTeX-Box'
 Plugin 'mileszs/ack.vim'
+Plugin 'Chiel92/vim-autoformat'
 " Plugin 'justinmk/vim-sneak'
 " Plugin 'osyo-manga/vim-over'
 
@@ -141,17 +143,17 @@ endif
 " do not history when leavy buffer
 set hidden
 
-" ctrl q to quit without saving
+" leader q to quit without saving
 noremap  <leader>q :quit<CR>
 vnoremap <leader>q <C-C>:quit<CR>
 inoremap <leader>q <Esc>:quit<CR>
 
-" ctrl w to delete buffer
+" leader w to delete buffer
 noremap  <leader>w :bdelete<CR>
 vnoremap <leader>w <C-C>:bdelete<CR>
 inoremap <leader>w <Esc>:bdelete<CR>
 
-" ctrl s to save
+" leader s to save
 noremap  <leader>s :update<CR>
 vnoremap <leader>s <C-C>:update<CR>
 inoremap <leader>s <Esc>:update<CR>
@@ -188,7 +190,7 @@ set noswapfile
 inoremap <C-c> <Esc>
 
 " Highlight the screen line of the cursor
-" set cursorline
+set cursorline
 
 " Use the same symbols as TextMate for tabstops and EOLs
 " set listchars=tab:▸\ ,eol:¬
@@ -311,3 +313,13 @@ let g:airline#extensions#tabline#enabled = 1
 let g:LatexBox_quickfix = 2
 let g:LatexBox_show_warnings = 0
 let g:LatexBox_build_dir = './build'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" lightline
+" let g:lightline = {
+"       \ 'colorscheme': 'solarized',
+"       \ 'tab': {
+"       \ 'active': [ 'filename', 'modified' ],
+"       \ 'inactive': [ 'filename', 'modified' ],
+"       \ },
+"       \ }
