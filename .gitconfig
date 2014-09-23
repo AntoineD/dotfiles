@@ -4,7 +4,7 @@
 [difftool]
 	prompt = false
 [diff]
-	tool = tkdiff
+	tool = meld
 [color]
 	status = auto
 	branch = auto
