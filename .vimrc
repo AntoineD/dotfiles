@@ -189,7 +189,7 @@ set noswapfile
 inoremap <C-c> <Esc>
 
 " Highlight the screen line of the cursor
-" set cursorline
+set cursorline
 
 " Use the same symbols as TextMate for tabstops and EOLs
 " set listchars=tab:▸\ ,eol:¬
