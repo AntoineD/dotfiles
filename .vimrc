@@ -9,7 +9,6 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-abolish'
@@ -29,6 +28,7 @@ Plugin 'LaTeX-Box-Team/LaTeX-Box'
 Plugin 'mileszs/ack.vim'
 " Plugin 'justinmk/vim-sneak'
 " Plugin 'osyo-manga/vim-over'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
 
 call vundle#end()
@@ -251,7 +251,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YCM
 " nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <leader>g :YcmCompleter GoTo<CR>
+nnoremap <leader>g :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <F6> :YcmDiags<CR>
@@ -260,6 +260,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_always_populate_location_list = 1
 let g:ycm_seed_identifiers_with_syntax = 1
+let g:ycm_collect_identifiers_from_tags_files = 1
 " let g:ycm_semantic_triggers = {
 "       \  'tex'  : ['{', '\'],
 "       \ }
