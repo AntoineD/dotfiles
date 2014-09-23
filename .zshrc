@@ -41,6 +41,7 @@ plugins=( \
     autojump \
     dirpersist \
     zsh-syntax-highlighting \
+    common-aliases \
     )
 
 source $ZSH/oh-my-zsh.sh
