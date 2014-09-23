@@ -29,6 +29,7 @@ Plugin 'LaTeX-Box-Team/LaTeX-Box'
 Plugin 'mileszs/ack.vim'
 " Plugin 'justinmk/vim-sneak'
 " Plugin 'osyo-manga/vim-over'
+Plugin 'majutsushi/tagbar'
 
 call vundle#end()
 filetype plugin indent on
@@ -311,3 +312,8 @@ let g:airline#extensions#tabline#enabled = 1
 let g:LatexBox_quickfix = 2
 let g:LatexBox_show_warnings = 0
 let g:LatexBox_build_dir = './build'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ctags
+set tags=./.tags;
+nmap <F8> :TagbarToggle<CR>
