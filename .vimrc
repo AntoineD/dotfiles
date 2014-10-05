@@ -15,6 +15,7 @@ Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
 Plugin 'kien/ctrlp.vim'
+Plugin 'FelikZ/ctrlp-py-matcher'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'tomtom/tcomment_vim'
@@ -206,14 +207,6 @@ set completeopt=menuone,longest,preview
 set clipboard^=unnamedplus
 
 let g:tex_flavor = "latex"
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" python
-" au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4 textwidth=72 formatoptions=cq
-" autocmd FileType python setlocal textwidth=72 formatoptions=cq
-" let g:python_highlight_all=1
-" let g:python_version_2 = 1
-" Folding based on indentation
 " set foldmethod=indent
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -239,6 +232,13 @@ let g:ctrlp_max_height = 30
 let g:ctrlp_extensions = ['tag']
 :nmap <C-B> :CtrlPBuffer<CR>
 :nmap <C-T> :CtrlPTag<CR>
+
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+
+if executable("ag")
+  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ultisnip
