@@ -9,6 +9,7 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-abolish'
