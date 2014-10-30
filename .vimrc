@@ -33,6 +33,7 @@ Plugin 'Chiel92/vim-autoformat'
 " Plugin 'osyo-manga/vim-over'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
+Plugin 'bronson/vim-trailing-whitespace'
 
 call vundle#end()
 filetype plugin indent on
