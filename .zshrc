@@ -68,9 +68,6 @@ fi
 # default file permissions
 umask u=rwx,g=rx,o=rx
 
-# misc
-export GREP_OPTIONS='--color=auto --exclude=*\.svn*'
-
 export PAGER=less
 # export LESS='-MN'
 
@@ -96,6 +93,7 @@ fi
 
 ################################################################################
 # alias
+alias grep='grep --color=auto'
 alias l='ls -AFGh --color'
 alias ll='ls -AFGlh --color'
 alias kk='ll'
