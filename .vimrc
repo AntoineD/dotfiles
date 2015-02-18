@@ -147,7 +147,7 @@ let g:syntastic_style_warning_symbol='SW'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP
-set wildignore+=*.o,*.so,*.pyc
+set wildignore+=*.o,*.so,*.pyc,tags
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/* 
 let g:ctrlp_max_height = 30
 let g:ctrlp_extensions = ['tag']
