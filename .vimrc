@@ -131,10 +131,6 @@ let g:tex_flavor = "latex"
 " set foldmethod=indent
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" .fsui stuff
-au BufRead,BufNewFile *.fsui setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4 
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic
 let g:syntastic_error_symbol='E'
 let g:syntastic_warning_symbol='W'
