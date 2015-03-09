@@ -8,6 +8,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
+" Plugin 'jalcine/cmake.vim' does not work
+Plugin 'vhdirk/vim-cmake'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-sleuth'
