@@ -32,12 +32,13 @@ Plugin 'wellle/targets.vim'
 Plugin 'LaTeX-Box-Team/LaTeX-Box'
 Plugin 'mileszs/ack.vim'
 Plugin 'ervandew/ag'
-Plugin 'Chiel92/vim-autoformat'
-" Plugin 'justinmk/vim-sneak'
-" Plugin 'osyo-manga/vim-over'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'majutsushi/tagbar'
 Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'ludovicchabant/vim-gutentags'
+" Plugin 'Chiel92/vim-autoformat'
+" Plugin 'justinmk/vim-sneak'
+" Plugin 'osyo-manga/vim-over'
 
 call vundle#end()
 filetype plugin indent on
@@ -241,3 +242,7 @@ let g:LatexBox_build_dir = './build'
 " ctags
 set tags=./.tags;
 nmap <F8> :TagbarToggle<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" gutentags
+let g:gutentags_ctags_options_file = '$HOME/.ctags'
