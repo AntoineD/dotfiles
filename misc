@@ -1,0 +1,11 @@
+Code crasher
+============
+
+static_const<volatile int*>(NULL) = 1;
+
+
+Render on client
+================
+
+export LIBGL_ALWAYS_INDIRECT=1
+
