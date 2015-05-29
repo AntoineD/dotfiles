@@ -108,6 +108,7 @@ alias ss="ps -aux"
 alias dot='ls .[a-zA-Z0-9_]*'
 alias m="less"
 alias v="vim"
+alias n="nvim"
 
 ################################################################################
 # local stuff
