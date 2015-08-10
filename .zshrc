@@ -74,22 +74,12 @@ export PAGER=less
 # python start file
 export PYTHONSTARTUP=~/dotfiles/.pythonrc
 
+# encoding
+export LANG=en_US.UTF-8
+export LC_ALL=$LANG
+export LANGUAGE=$LANG
+
 include () { test -f "$1" && source "$1"; }
-
-################################################################################
-# MODULES
-if include ~/local/lmod/lmod/init/zsh ; then
-    module use ~/local/modules
-    module use ~/flowsim/modules
-    module use ~/flowsim/privatemodules
-
-    # module load scons
-    module load vim
-    module load git
-    module load ctags
-    module load cscope
-    module load ack
-fi
 
 ################################################################################
 # alias
