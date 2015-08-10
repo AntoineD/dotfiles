@@ -1,6 +1,3 @@
 #%Module1.0
 
-module use /home/ng1154e/local/modules
-module use /home/ng1154e/flowsim/modules
-module use /home/ng1154e/flowsim/privatemodules
-
+module use /work/hpc/modules/modulefiles
