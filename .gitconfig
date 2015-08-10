@@ -24,3 +24,5 @@
     rmdir = true
 [url "http://"]
 	insteadOf = git://
+[push]
+	default = matching
