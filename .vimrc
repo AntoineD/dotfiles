@@ -29,14 +29,15 @@ Plugin 'matze/vim-move'
 Plugin 'bling/vim-airline'
 Plugin 'hynek/vim-python-pep8-indent'
 Plugin 'wellle/targets.vim'
-Plugin 'LaTeX-Box-Team/LaTeX-Box'
 Plugin 'mileszs/ack.vim'
 Plugin 'ervandew/ag'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'rdnetto/YCM-Generator'
 Plugin 'majutsushi/tagbar'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'MarcWeber/vim-addon-local-vimrc'
+" Plugin 'rdnetto/YCM-Generator'
+" Plugin 'LaTeX-Box-Team/LaTeX-Box'
 " Plugin 'Chiel92/vim-autoformat'
 " Plugin 'justinmk/vim-sneak'
 " Plugin 'osyo-manga/vim-over'
@@ -151,7 +152,7 @@ let g:syntastic_style_warning_symbol='SW'
 "                            \ 'active_filetypes': ['python'],
 "                            \ 'passive_filetypes': [] }
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list=1
+" let g:syntastic_auto_loc_list=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP
