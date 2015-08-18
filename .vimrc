@@ -134,6 +134,13 @@ set clipboard^=unnamedplus
 let g:tex_flavor = "latex"
 " set foldmethod=indent
 
+if executable("ag")
+  set grepprg=ag\ --nogroup\ --nocolor
+endif
+
+set wildignore+=*.o,*.so,*.pyc,tags
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/* 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic
 let g:syntastic_error_symbol='E'
@@ -148,8 +155,6 @@ let g:syntastic_auto_loc_list=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP
-set wildignore+=*.o,*.so,*.pyc,tags
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/* 
 let g:ctrlp_max_height = 30
 let g:ctrlp_extensions = ['tag']
 :nmap <C-B> :CtrlPBuffer<CR>
@@ -157,10 +162,9 @@ let g:ctrlp_extensions = ['tag']
 
 let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
-if executable("ag")
-  set grepprg=ag\ --nogroup\ --nocolor
-  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
-endif
+" if executable("ag")
+"   let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
+" endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ultisnip
