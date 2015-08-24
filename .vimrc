@@ -2,57 +2,57 @@ set nocompatible
 filetype off
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vundle bootstrap
+" vim-plug bootstrap
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
-" Plugin 'jalcine/cmake.vim' does not work
-Plugin 'vhdirk/vim-cmake'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'tpope/vim-vinegar'
-Plugin 'tpope/vim-sleuth'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-sensible'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'FelikZ/ctrlp-py-matcher'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'tomtom/tcomment_vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'hdima/python-syntax'
-Plugin 'matze/vim-move'
-Plugin 'bling/vim-airline'
-Plugin 'hynek/vim-python-pep8-indent'
-Plugin 'wellle/targets.vim'
-Plugin 'mileszs/ack.vim'
-Plugin 'ervandew/ag'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'majutsushi/tagbar'
-Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'ludovicchabant/vim-gutentags'
-Plugin 'MarcWeber/vim-addon-local-vimrc'
-" Plugin 'rdnetto/YCM-Generator'
-" Plugin 'LaTeX-Box-Team/LaTeX-Box'
-" Plugin 'Chiel92/vim-autoformat'
-" Plugin 'justinmk/vim-sneak'
-" Plugin 'osyo-manga/vim-over'
+" Plug 'jalcine/cmake.vim' does not work
+Plug 'vhdirk/vim-cmake'
+" Plug 'altercation/vim-colors-solarized'
+Plug 'romainl/flattened'
+Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-sensible'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'tomtom/tcomment_vim'
+Plug 'scrooloose/syntastic'
+Plug 'hdima/python-syntax'
+Plug 'matze/vim-move'
+Plug 'bling/vim-airline'
+Plug 'hynek/vim-python-pep8-indent'
+Plug 'wellle/targets.vim'
+Plug 'LaTeX-Box-Team/LaTeX-Box'
+Plug 'mileszs/ack.vim'
+Plug 'ervandew/ag'
+Plug 'Valloric/YouCompleteMe'
+Plug 'majutsushi/tagbar'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'MarcWeber/vim-addon-local-vimrc'
+Plug 'tmux-plugins/vim-tmux'
+" Plug 'rdnetto/YCM-Generator'
+" Plug 'Chiel92/vim-autoformat'
+" Plug 'justinmk/vim-sneak'
+" Plug 'osyo-manga/vim-over'
 
-call vundle#end()
-filetype plugin indent on
+call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "colorscheme
 set t_Co=16 " Explicitly tell Vim that the terminal supports 16 colors
+" set term=screen-256color
 
 " set background=light
-set background=dark
-colorscheme solarized
+" set background=dark
 " let g:solarized_termcolors=256
+" colorscheme solarized
+colorscheme flattened_dark
 
 set number
 set hlsearch   " switch on highlighting the last used search pattern.
