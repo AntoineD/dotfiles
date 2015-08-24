@@ -101,5 +101,9 @@ alias v="vim"
 alias n="nvim"
 
 ################################################################################
+# dircolors
+eval `dircolors $HOME/dotfiles/dircolors-solarized/dircolors.ansi-universal`
+
+################################################################################
 # local stuff
 include ~/.myrc
