@@ -143,6 +143,9 @@ endif
 set wildignore+=*.o,*.so,*.pyc,tags
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/* 
 
+" center current line on screen
+set scrolloff=1000
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic
 let g:syntastic_error_symbol='E'
