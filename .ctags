@@ -1,0 +1,14 @@
+-R
+--fields=+l
+--exclude=.\*
+--exclude=.git
+--exclude=.svn
+--exclude=.hg
+--exclude=\*.swp
+--exclude=\*.bak
+--exclude=\*.pyc
+--exclude=\*.pdb
+--exclude=tags
+--exclude=cscope.\*
+--exclude=\*.tar.\*
+--exclude=build
