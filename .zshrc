@@ -84,10 +84,10 @@ include () { test -f "$1" && source "$1"; }
 ################################################################################
 # alias
 alias grep='grep --color=auto'
-alias l='ls -AFGh --color'
-alias ll='ls -AFGlh --color'
-alias kk='ll'
+alias ll='ls -AFGh --color'
 alias lt='ls -AFGlrth --color'
+alias l='ls -AFGlh --color'
+alias kk='ll'
 alias h='history'
 alias j="jobs -l"
 alias rm='rm -i'
@@ -99,6 +99,8 @@ alias dot='ls .[a-zA-Z0-9_]*'
 alias m="less"
 alias v="vim"
 alias n="nvim"
+alias v="nvim"
+alias c="cd"
 
 ################################################################################
 # dircolors
