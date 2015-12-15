@@ -1,3 +1,6 @@
 [submodule "Gdbinit"]
 	path = Gdbinit
 	url = https://github.com/gdbinit/Gdbinit
+[submodule "antigen"]
+	path = antigen
+	url = https://github.com/zsh-users/antigen.git
