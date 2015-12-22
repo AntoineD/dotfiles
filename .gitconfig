@@ -14,6 +14,7 @@
 	excludesfile = ~/.gitignore
 	autocrlf = input
 	editor = vim
+	symlinks = true
 [gui]
 	fontdiff = -family Monospace -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 	warndetachedcommit = true
