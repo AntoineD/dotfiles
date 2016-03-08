@@ -14,6 +14,7 @@ antigen bundle common-aliases
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-completions src
+antigen bundle zsh-users/zsh-autosuggestions
 
 antigen theme $HOME/dotfiles/.oh-my-zsh/custom/themes my.zsh-theme
 
@@ -43,6 +44,11 @@ setopt hist_save_no_dups
 # completion
 zstyle ':completion:*' hosts off
 bindkey -M menuselect '^M' .accept-line
+
+################################################################################
+# autosuggestions
+bindkey '^ ' autosuggest-accept
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='bg=red,fg=white'
 
 ################################################################################
 # disable ctrl-s that freezes the shell
@@ -85,7 +91,6 @@ alias dot='ls .[a-zA-Z0-9_]*'
 alias m="less"
 alias v="vim"
 alias n="nvim"
-alias v="nvim"
 alias c="cd"
 
 ################################################################################
