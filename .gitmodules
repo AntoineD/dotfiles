@@ -7,3 +7,6 @@
 [submodule "dircolors-solarized"]
 	path = dircolors-solarized
 	url = https://github.com/seebi/dircolors-solarized
+[submodule "xresources-solarized"]
+	path = xresources-solarized
+	url = https://github.com/solarized/xresources
