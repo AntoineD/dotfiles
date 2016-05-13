@@ -1,1 +1,1 @@
-Gdbinit/gdbinit
+gdb-dashboard/.gdbinit
