@@ -148,7 +148,7 @@ set wildignore+=*.o,*.so,*.pyc,tags
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/* 
 
 " center current line on screen
-set scrolloff=1000
+" set scrolloff=1000
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic
