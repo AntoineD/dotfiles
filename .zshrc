@@ -16,6 +16,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-completions src
 antigen bundle zsh-users/zsh-autosuggestions
+# antigen bundle ericfreese/zsh-cwd-history needs md5
 
 antigen theme $HOME/dotfiles/.oh-my-zsh/custom/themes my.zsh-theme
 
@@ -48,7 +49,7 @@ bindkey -M menuselect '^M' .accept-line
 
 ################################################################################
 # autosuggestions
-bindkey '^ ' autosuggest-accept
+bindkey '^\j' autosuggest-execute
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='bg=red,fg=white'
 
 ################################################################################
