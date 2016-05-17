@@ -1,6 +1,7 @@
 ! use solarized dark theme
 #include "dotfiles/xresources-solarized/Xresources.dark"
 
+xterm*font: 9x15
 URxvt.font: 9x15
 ! URxvt.letterSpace: -5
 URxvt.fading: 0
