@@ -187,8 +187,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YCM
 " nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <leader>g :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>g :YcmCompleter GoTo<CR>
+nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>gi :YcmCompleter GoToInclude<CR>
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <F6> :YcmDiags<CR>
 let g:ycm_add_preview_to_completeopt = 1
