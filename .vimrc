@@ -274,5 +274,6 @@ if has('nvim')
   nnoremap <A-j> <C-w>j
   nnoremap <A-k> <C-w>k
   nnoremap <A-l> <C-w>l
+  set termguicolors
+  let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 endif
-
