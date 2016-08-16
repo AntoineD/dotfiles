@@ -68,6 +68,9 @@ umask u=rwx,g=rx,o=rx
 export PAGER=less
 # export LESS='-MN'
 
+# use nvim for reading manpages
+export MANPAGER="nvim -c 'set ft=man' -"
+
 # python start file
 export PYTHONSTARTUP=~/dotfiles/.pythonrc
 
