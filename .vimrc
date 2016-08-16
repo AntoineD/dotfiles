@@ -38,7 +38,7 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'MarcWeber/vim-addon-local-vimrc'
 Plug 'tmux-plugins/vim-tmux'
-Plug 'linktohack/vim-gfortran-compiler'
+" Plug 'linktohack/vim-gfortran-compiler'
 Plug 'vhdirk/vim-cmake'
 " Plug 'jalcine/cmake.vim' does not work
 " Plug 'rdnetto/YCM-Generator'
@@ -50,7 +50,7 @@ call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "colorscheme
-set t_Co=16 " Explicitly tell Vim that the terminal supports 16 colors
+" set t_Co=16 " Explicitly tell Vim that the terminal supports 16 colors
 " set term=screen-256color
 
 " set background=light
@@ -166,6 +166,7 @@ let g:syntastic_always_populate_loc_list = 1
 " CtrlP
 let g:ctrlp_max_height = 30
 let g:ctrlp_extensions = ['tag']
+let g:ctrlp_open_multiple_files = 'r'
 :nmap <C-B> :CtrlPBuffer<CR>
 :nmap <C-T> :CtrlPTag<CR>
 
