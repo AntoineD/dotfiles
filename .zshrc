@@ -14,7 +14,7 @@ antigen bundle common-aliases
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
-antigen bundle zsh-users/zsh-completions src
+antigen bundle zsh-users/zsh-completions
 antigen bundle zsh-users/zsh-autosuggestions
 # antigen bundle ericfreese/zsh-cwd-history needs md5
 
