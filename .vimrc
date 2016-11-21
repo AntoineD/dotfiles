@@ -23,7 +23,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'FelikZ/ctrlp-py-matcher'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'scrooloose/syntastic'
+Plug 'vim-syntastic/syntastic'
 Plug 'hdima/python-syntax'
 " Plug 'matze/vim-move'
 Plug 'hynek/vim-python-pep8-indent'
@@ -32,16 +32,16 @@ Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'mileszs/ack.vim'
 Plug 'ervandew/ag'
 Plug 'Valloric/YouCompleteMe'
+" Plug 'rdnetto/YCM-Generator'
 " Plug 'ternjs/tern_for_vim'
 Plug 'majutsushi/tagbar'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'MarcWeber/vim-addon-local-vimrc'
-Plug 'tmux-plugins/vim-tmux'
+" Plug 'tmux-plugins/vim-tmux'
 " Plug 'linktohack/vim-gfortran-compiler'
-Plug 'vhdirk/vim-cmake'
+" Plug 'vhdirk/vim-cmake'
 " Plug 'jalcine/cmake.vim' does not work
-" Plug 'rdnetto/YCM-Generator'
 " Plug 'Chiel92/vim-autoformat'
 " Plug 'justinmk/vim-sneak'
 " Plug 'osyo-manga/vim-over'
@@ -150,6 +150,9 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 " center current line on screen
 " set scrolloff=1000
 
+if exists('&inccommand')
+  set inccommand=split
+endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic
 let g:syntastic_error_symbol='E'
