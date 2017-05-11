@@ -6,45 +6,75 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 
-" Plug 'altercation/vim-colors-solarized'
+if !has('nvim')
+  Plug 'tpope/vim-sensible'
+endif
+
+""""""""""""""""""""""""""""
+" theme
 Plug 'romainl/flattened'
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-vinegar'
+" Plug 'altercation/vim-colors-solarized'
+""""""""""""""""""""""""""""
+" misc
+Plug 'romainl/vim-cool'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-dotenv'
+" Plug 'tmux-plugins/vim-tmux'
+" Plug 'linktohack/vim-gfortran-compiler'
+" Plug 'vhdirk/vim-cmake'
+" Plug 'jalcine/cmake.vim' does not work
+" Plug 'romainl/vim-qlist'
+"""""""""""""""""""""""""""""
+" file system
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'justinmk/vim-dirvish'
+" Plug 'tpope/vim-vinegar'
+"""""""""""""""""""""""""""""
+" commentaries
+" Plug 'tpope/vim-commentary'
+Plug 'tomtom/tcomment_vim'
+"""""""""""""""""""""""""""""
+" status line
+Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+"""""""""""""""""""""""""""""
+" snippets
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+"""""""""""""""""""""""""""""
+" syntax
+Plug 'w0rp/ale'
+Plug 'hdima/python-syntax'
+Plug 'vimjas/vim-python-pep8-indent'
+" Plug 'Chiel92/vim-autoformat'
+" Plug 'vim-syntastic/syntastic'
+"""""""""""""""""""""""""""""
+" editing
+Plug 'wellle/targets.vim'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-dotenv'
-" Plug 'tpope/vim-commentary'
-Plug 'tomtom/tcomment_vim'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'FelikZ/ctrlp-py-matcher'
-Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'vim-syntastic/syntastic'
-Plug 'hdima/python-syntax'
 " Plug 'matze/vim-move'
-Plug 'hynek/vim-python-pep8-indent'
-Plug 'wellle/targets.vim'
-Plug 'LaTeX-Box-Team/LaTeX-Box'
-Plug 'mileszs/ack.vim'
-Plug 'ervandew/ag'
+" Plug 'justinmk/vim-sneak'
+" Plug 'osyo-manga/vim-over'
+" Plug 'LaTeX-Box-Team/LaTeX-Box'
+"""""""""""""""""""""""""""""
+" grepping
+Plug 'mhinz/vim-grepper'
+" Plug 'mileszs/ack.vim'
+" Plug 'ervandew/ag'
+"""""""""""""""""""""""""""""
+" completion
 Plug 'Valloric/YouCompleteMe'
 " Plug 'rdnetto/YCM-Generator'
 " Plug 'ternjs/tern_for_vim'
+"""""""""""""""""""""""""""""
+" code navigation
 Plug 'majutsushi/tagbar'
-Plug 'bronson/vim-trailing-whitespace'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'bronson/vim-trailing-whitespace'
 Plug 'MarcWeber/vim-addon-local-vimrc'
-" Plug 'tmux-plugins/vim-tmux'
-" Plug 'linktohack/vim-gfortran-compiler'
-" Plug 'vhdirk/vim-cmake'
-" Plug 'jalcine/cmake.vim' does not work
-" Plug 'Chiel92/vim-autoformat'
-" Plug 'justinmk/vim-sneak'
-" Plug 'osyo-manga/vim-over'
 
 call plug#end()
 
@@ -59,6 +89,9 @@ call plug#end()
 " colorscheme solarized
 colorscheme flattened_dark
 
+" Highlight the screen line of the cursor
+set cursorline
+
 set number
 set hlsearch   " switch on highlighting the last used search pattern.
 " set ignorecase
@@ -70,6 +103,10 @@ map Q gq
 if has('mouse')
   set mouse=a
 endif
+
+" python used
+" let g:python_host_prog="/home/ng1154e/local/bin/python2"
+" set g:python3_host_prog=/home/ng1154e/local/bin/python3
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " do not history when leavy buffer
@@ -121,9 +158,6 @@ set noswapfile
 " exit insert mode
 inoremap <C-c> <Esc>
 
-" Highlight the screen line of the cursor
-set cursorline
-
 " Use the same symbols as TextMate for tabstops and EOLs
 " set listchars=tab:▸\ ,eol:¬
 "set listchars=tab:▸\ 
@@ -140,10 +174,6 @@ set clipboard^=unnamedplus
 let g:tex_flavor = "latex"
 " set foldmethod=indent
 
-if executable("ag")
-  set grepprg=ag\ --nogroup\ --nocolor
-endif
-
 set wildignore+=*.o,*.so,*.pyc,tags
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/* 
 
@@ -153,6 +183,19 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 if exists('&inccommand')
   set inccommand=split
 endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Grepper
+nnoremap <leader>g :Grepper<cr>
+let g:grepper = {}
+let g:grepper.next_tool = '<leader>g'
+let g:grepper.tools = ['rg', 'ack', 'grep', 'git'] 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ALE
+let g:ale_sign_error='E'
+let g:ale_sign_warning='W'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic
 let g:syntastic_error_symbol='E'
@@ -191,9 +234,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " YCM
 " nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <leader>g :YcmCompleter GoTo<CR>
-nnoremap <leader>gd :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>gi :YcmCompleter GoToInclude<CR>
+nnoremap <leader>y :YcmCompleter GoTo<CR>
+nnoremap <leader>yd :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>yi :YcmCompleter GoToInclude<CR>
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <F6> :YcmDiags<CR>
 let g:ycm_add_preview_to_completeopt = 1
