@@ -19,6 +19,7 @@ Plug 'romainl/flattened'
 Plug 'romainl/vim-cool'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-dotenv'
+" Plug 'romainl/vim-cool'
 " Plug 'tmux-plugins/vim-tmux'
 " Plug 'linktohack/vim-gfortran-compiler'
 " Plug 'vhdirk/vim-cmake'
@@ -95,6 +96,10 @@ set cursorline
 set number
 set hlsearch   " switch on highlighting the last used search pattern.
 " set ignorecase
+" Use <C-L> to clear the highlighting of :set hlsearch.
+if maparg('<C-L>', 'n') ==# ''
+  nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+endif
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
