@@ -16,7 +16,7 @@ Plug 'romainl/flattened'
 " Plug 'altercation/vim-colors-solarized'
 """"""""""""""""""""""""""""
 " misc
-Plug 'romainl/vim-cool'
+" Plug 'romainl/vim-cool'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-dotenv'
 " Plug 'romainl/vim-cool'
