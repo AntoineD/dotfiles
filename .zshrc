@@ -1,26 +1,8 @@
 source ~/.proxy
+
+# export ANTIGEN_CACHE=false
 source $HOME/dotfiles/antigen/antigen.zsh
-
-antigen use oh-my-zsh
-
-antigen bundle git
-antigen bundle colored-man-pages
-antigen bundle pip
-antigen bundle python
-# antigen bundle history-substring-search
-antigen bundle autojump
-antigen bundle dirpersist
-antigen bundle common-aliases
-
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-history-substring-search
-antigen bundle zsh-users/zsh-completions
-antigen bundle zsh-users/zsh-autosuggestions
-# antigen bundle ericfreese/zsh-cwd-history needs md5
-
-antigen theme $HOME/dotfiles/.oh-my-zsh/custom/themes my.zsh-theme
-
-antigen apply
+antigen init $HOME/.antigenrc
 
 ################################################################################
 # history settings
@@ -108,3 +90,8 @@ eval `dircolors $HOME/dotfiles/dircolors-solarized/dircolors.ansi-universal`
 ################################################################################
 # local stuff
 include ~/.myrc
+
+################################################################################
+# FZF
+# export FZF_DEFAULT_OPTS="--preview"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
