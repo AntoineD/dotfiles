@@ -43,6 +43,7 @@ Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 """""""""""""""""""""""""""""
 " syntax
+Plug 'chase/vim-ansible-yaml'
 Plug 'w0rp/ale'
 Plug 'hdima/python-syntax'
 Plug 'vimjas/vim-python-pep8-indent'
