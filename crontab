@@ -1,2 +1,2 @@
-1 1 * * sat find $HOME/scratch/ -exec touch -a {} \;
-2 2 * * *   rsync -avz --delete /scratch/ng1154e/ /projects/320NeoChimera/Flowsim_dev/ng1154e/scratch
+1 1 * * *   find $HOME/scratch/ -exec touch -a {} \;
+2 2 * * *   rsync -avz --delete /scratch/ng1154e/ $HOME/fsnreg/scratch/
