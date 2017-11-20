@@ -181,7 +181,7 @@ let g:tex_flavor = "latex"
 " set foldmethod=indent
 
 set wildignore+=*.o,*.so,*.pyc,tags
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/* 
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
 
 " center current line on screen
 " set scrolloff=1000
@@ -195,7 +195,7 @@ endif
 nnoremap <leader>g :Grepper<cr>
 let g:grepper = {}
 let g:grepper.next_tool = '<leader>g'
-let g:grepper.tools = ['rg', 'ack', 'grep', 'git'] 
+let g:grepper.tools = ['rg', 'ack', 'grep', 'git']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ALE
@@ -270,7 +270,7 @@ let g:ycm_confirm_extra_conf = 0
 "     endif
 "     return ""
 " endfunction
-" 
+"
 " au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
 " au BufEnter * exec "snoremap <silent> " . g:UltiSnipsExpandTrigger . " <Esc>:call UltiSnips_ExpandSnippetOrJump()<cr>"
 
@@ -328,5 +328,6 @@ if has('nvim')
   nnoremap <A-k> <C-w>k
   nnoremap <A-l> <C-w>l
   set termguicolors
-  let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+  set guicursor=
+  " let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 endif
