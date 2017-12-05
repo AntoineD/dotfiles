@@ -12,7 +12,8 @@ endif
 
 """"""""""""""""""""""""""""
 " theme
-Plug 'romainl/flattened'
+" Plug 'romainl/flattened'
+Plug 'icymind/NeoSolarized'
 " Plug 'altercation/vim-colors-solarized'
 """"""""""""""""""""""""""""
 " misc
@@ -82,6 +83,10 @@ call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "colorscheme
+if has("termguicolors")
+  set termguicolors
+endif
+
 " set t_Co=16 " Explicitly tell Vim that the terminal supports 16 colors
 " set term=screen-256color
 
@@ -89,8 +94,36 @@ call plug#end()
 " set background=dark
 " let g:solarized_termcolors=256
 " colorscheme solarized
-colorscheme flattened_dark
+" flattened
+" colorscheme flattened_dark
 
+" neosolarized
+" let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+" set t_8f=^[[38;2;%lu;%lu;%lum
+" set t_8b=^[[48;2;%lu;%lu;%lum
+colorscheme NeoSolarized
+set background=dark
+" default value is "normal", Setting this option to "high" or "low" does use the
+" same Solarized palette but simply shifts some values up or down in order to
+" expand or compress the tonal range displayed.
+" let g:neosolarized_contrast = "normal"
+
+" Special characters such as trailing whitespace, tabs, newlines, when displayed
+" using ":set list" can be set to one of three levels depending on your needs.
+" Default value is "normal". Provide "high" and "low" options.
+let g:neosolarized_visibility = "high"
+
+" I make vertSplitBar a transparent background color. If you like the origin solarized vertSplitBar
+" style more, set this value to 0.
+" let g:neosolarized_vertSplitBgTrans = 1
+
+" If you wish to enable/disable NeoSolarized from displaying bold, underlined or italicized
+" typefaces, simply assign 1 or 0 to the appropriate variable. Default values:
+" let g:neosolarized_bold = 1
+" let g:neosolarized_underline = 1
+" let g:neosolarized_italic = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Highlight the screen line of the cursor
 set cursorline
 
@@ -111,8 +144,8 @@ if has('mouse')
 endif
 
 " python used
-" let g:python_host_prog="/home/ng1154e/local/bin/python2"
-" set g:python3_host_prog=/home/ng1154e/local/bin/python3
+let g:python_host_prog="/home/ng1154e/.local/opt/python/2.7.13/bin/python"
+" set g:python3_host_prog=
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " do not history when leavy buffer
@@ -193,6 +226,8 @@ endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Grepper
 nnoremap <leader>g :Grepper<cr>
+nmap gs <plug>(GrepperOperator)
+xmap gs <plug>(GrepperOperator)
 let g:grepper = {}
 let g:grepper.next_tool = '<leader>g'
 let g:grepper.tools = ['rg', 'ack', 'grep', 'git']
@@ -222,11 +257,13 @@ let g:ctrlp_open_multiple_files = 'r'
 :nmap <C-B> :CtrlPBuffer<CR>
 :nmap <C-T> :CtrlPTag<CR>
 
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+" let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 
-" if executable("ag")
-"   let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
-" endif
+if executable('rg')
+  set grepprg=rg\ --color=never
+  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+  let g:ctrlp_use_caching = 0
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ultisnip
@@ -327,7 +364,6 @@ if has('nvim')
   nnoremap <A-j> <C-w>j
   nnoremap <A-k> <C-w>k
   nnoremap <A-l> <C-w>l
-  set termguicolors
   set guicursor=
   " let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 endif
