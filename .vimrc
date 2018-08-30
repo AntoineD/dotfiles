@@ -236,6 +236,13 @@ let g:grepper.tools = ['rg', 'ack', 'grep', 'git']
 " ALE
 let g:ale_sign_error='E'
 let g:ale_sign_warning='W'
+" prevent ALE linting for cpp
+let g:ale_cpp_clang_executable=''
+let g:ale_cpp_clangcheck_executable=''
+let g:ale_cpp_clangtidy_executable=''
+let g:ale_cpp_cppcheck_executable=''
+let g:ale_cpp_cpplint_executable=''
+let g:ale_cpp_gcc_executable=''
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic
