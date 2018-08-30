@@ -1,6 +1,6 @@
 [user]
 	name = Antoine DECHAUME
-	email = antoine.dechaume@sogeti.com
+	email = antoine.dechaume@c-s.fr
 [difftool]
 	prompt = false
 [diff]
@@ -19,6 +19,8 @@
 	fontdiff = -family Monospace -size 10 -weight normal -slant roman -underline 0 -overstrike 0
 	warndetachedcommit = true
 	fontui = -family gothic -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+	spellingdictionary = none
+	tabsize = 4
 [http]
 	sslVerify = true
 [svn]
@@ -27,3 +29,5 @@
 	insteadOf = git://
 [push]
 	default = matching
+[credential]
+	helper = store --file ~/.gitcredentials
