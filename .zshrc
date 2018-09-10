@@ -12,6 +12,8 @@ antigen init $HOME/.antigenrc
 # sensitive to whether this is loaded before or after the vi-mode plugin
 bindkey -M emacs '^P' history-substring-search-up
 bindkey -M emacs '^N' history-substring-search-down
+bindkey -M emacs '^F' vi-forward-blank-word
+bindkey -M emacs '^B' vi-backward-blank-word
 
 if [[ -n "$terminfo[kcuu1]" ]]; then
     bindkey -M emacs "$terminfo[kcuu1]" history-substring-search-up
@@ -82,6 +84,9 @@ alias m="less"
 alias v="vim"
 alias n="nvim"
 alias c="cd"
+
+# for using fd
+unalias fd
 
 ################################################################################
 # dircolors
