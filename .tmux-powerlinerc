@@ -1,4 +1,7 @@
 # Default configuration file for tmux-powerline.
+# Modeline {
+#	 vi: foldmarker={,} foldmethod=marker foldlevel=0 tabstop=4 filetype=sh
+# }
 
 # General {
 	# Show which segment fails and its exit code.
@@ -23,6 +26,11 @@
 # date.sh {
 	# date(1) format for the date. If you don't, for some reason, like ISO 8601 format you might want to have "%D" or "%m/%d/%Y".
 	export TMUX_POWERLINE_SEG_DATE_FORMAT="%F"
+# }
+
+# disk_usage.sh {
+	# Filesystem to retrieve disk space information. Any from the filesystems available (run "df | awk '{print }'" to check them).
+	export TMUX_POWERLINE_SEG_DISK_USAGE_FILESYSTEM="/"
 # }
 
 # earthquake.sh {
@@ -123,7 +131,6 @@
 	export TMUX_POWERLINE_SEG_WEATHER_UPDATE_PERIOD="600"
 	# Name of GNU grep binary if in PATH, or path to it.
 	export TMUX_POWERLINE_SEG_WEATHER_GREP="grep"
-
 	# Your location. Find a code that works for you:
 	# 1. Go to Yahoo weather http://weather.yahoo.com/
 	# 2. Find the weather for you location
