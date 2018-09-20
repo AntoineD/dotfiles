@@ -12,12 +12,11 @@ endif
 
 """"""""""""""""""""""""""""
 " theme
-" Plug 'romainl/flattened'
 Plug 'icymind/NeoSolarized'
+" Plug 'romainl/flattened'
 " Plug 'altercation/vim-colors-solarized'
 """"""""""""""""""""""""""""
 " misc
-" Plug 'romainl/vim-cool'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-dotenv'
 " Plug 'romainl/vim-cool'
@@ -26,6 +25,7 @@ Plug 'tpope/vim-dotenv'
 " Plug 'vhdirk/vim-cmake'
 " Plug 'jalcine/cmake.vim' does not work
 " Plug 'romainl/vim-qlist'
+" Plug 'igankevich/mesonic'
 """""""""""""""""""""""""""""
 " file system
 Plug 'ctrlpvim/ctrlp.vim'
@@ -34,8 +34,8 @@ Plug 'justinmk/vim-dirvish'
 " Plug 'tpope/vim-vinegar'
 """""""""""""""""""""""""""""
 " commentaries
-" Plug 'tpope/vim-commentary'
 Plug 'tomtom/tcomment_vim'
+" Plug 'tpope/vim-commentary'
 """""""""""""""""""""""""""""
 " status line
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
@@ -111,7 +111,7 @@ set background=dark
 " Special characters such as trailing whitespace, tabs, newlines, when displayed
 " using ":set list" can be set to one of three levels depending on your needs.
 " Default value is "normal". Provide "high" and "low" options.
-let g:neosolarized_visibility = "high"
+" let g:neosolarized_visibility = "high"
 
 " I make vertSplitBar a transparent background color. If you like the origin solarized vertSplitBar
 " style more, set this value to 0.
@@ -144,11 +144,11 @@ if has('mouse')
 endif
 
 " python used
-let g:python_host_prog="/home/ng1154e/.local/opt/python/2.7.13/bin/python"
-" set g:python3_host_prog=
+" let g:python_host_prog="/home/ng1154e/.local/opt/python/2.7.13/bin/python"
+" let g:python3_host_prog="/home/adechaum/anaconda3/anaconda3/envs/neovim/bin/python"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" do not history when leavy buffer
+" do not use history when leavy buffer
 set hidden
 
 " leader q to quit without saving
@@ -196,11 +196,6 @@ set noswapfile
 
 " exit insert mode
 inoremap <C-c> <Esc>
-
-" Use the same symbols as TextMate for tabstops and EOLs
-" set listchars=tab:▸\ ,eol:¬
-"set listchars=tab:▸\ 
-"set list
 
 " indentation
 " set smartindent
@@ -276,7 +271,7 @@ endif
 " Ultisnip
 " to get ultisnip to work with YCM
 let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
+" let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " let g:UltiSnipsJumpForwardTrigger="<tab>"
 " let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
