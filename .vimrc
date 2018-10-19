@@ -1,5 +1,5 @@
-set nocompatible
-filetype off
+" set nocompatible
+" filetype off
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-plug bootstrap
@@ -19,6 +19,7 @@ Plug 'icymind/NeoSolarized'
 " misc
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-dotenv'
+Plug 'neomake/neomake'
 " Plug 'romainl/vim-cool'
 " Plug 'tmux-plugins/vim-tmux'
 " Plug 'linktohack/vim-gfortran-compiler'
@@ -48,12 +49,13 @@ Plug 'chase/vim-ansible-yaml'
 Plug 'w0rp/ale'
 Plug 'hdima/python-syntax'
 Plug 'vimjas/vim-python-pep8-indent'
+Plug 'gu-fan/riv.vim'
 " Plug 'Chiel92/vim-autoformat'
 " Plug 'vim-syntastic/syntastic'
 """""""""""""""""""""""""""""
 " editing
 Plug 'wellle/targets.vim'
-Plug 'tpope/vim-sleuth'
+" Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat'
@@ -205,7 +207,6 @@ set completeopt=menuone,longest,preview
 " use OS clipboard
 set clipboard^=unnamedplus
 
-let g:tex_flavor = "latex"
 " set foldmethod=indent
 
 set wildignore+=*.o,*.so,*.pyc,tags
@@ -353,6 +354,14 @@ nmap <F8> :TagbarToggle<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gutentags
 let g:gutentags_ctags_options_file = '$HOME/.ctags'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" neomake
+let g:neomake_open_list = 2
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" riv
+let g:riv_disable_folding = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nvim
