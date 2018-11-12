@@ -29,8 +29,10 @@ Plug 'neomake/neomake'
 " Plug 'igankevich/mesonic'
 """""""""""""""""""""""""""""
 " file system
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'FelikZ/ctrlp-py-matcher'
+" Plug 'ctrlpvim/ctrlp.vim'
+" Plug 'FelikZ/ctrlp-py-matcher'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'
 " Plug 'tpope/vim-vinegar'
 """""""""""""""""""""""""""""
@@ -55,7 +57,7 @@ Plug 'gu-fan/riv.vim'
 """""""""""""""""""""""""""""
 " editing
 Plug 'wellle/targets.vim'
-" Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat'
@@ -254,19 +256,26 @@ let g:syntastic_always_populate_loc_list = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlP
-let g:ctrlp_max_height = 30
-let g:ctrlp_extensions = ['tag']
-let g:ctrlp_open_multiple_files = 'r'
-:nmap <C-B> :CtrlPBuffer<CR>
-:nmap <C-T> :CtrlPTag<CR>
+" let g:ctrlp_max_height = 30
+" let g:ctrlp_extensions = ['tag']
+" let g:ctrlp_open_multiple_files = 'r'
+" :nmap <C-B> :CtrlPBuffer<CR>
+" :nmap <C-T> :CtrlPTag<CR>
+"
+" " let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+"
+" if executable('rg')
+"   set grepprg=rg\ --color=never
+"   let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+"   let g:ctrlp_use_caching = 0
+" endif
 
-" let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-
-if executable('rg')
-  set grepprg=rg\ --color=never
-  let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-  let g:ctrlp_use_caching = 0
-endif
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" fzf
+:nmap <C-B> :Buffer<CR>
+:nmap <C-F> :Files<CR>
+:nmap <C-T> :Tags<CR>
+:nmap <C-H> :History<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ultisnip
