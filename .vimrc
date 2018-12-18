@@ -221,6 +221,9 @@ if exists('&inccommand')
   set inccommand=split
 endif
 
+" no double space after . when reformating
+set nojoinspaces
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Grepper
 nnoremap <leader>g :Grepper<cr>
