@@ -19,7 +19,7 @@ Plug 'icymind/NeoSolarized'
 " misc
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-dotenv'
-Plug 'neomake/neomake'
+" Plug 'neomake/neomake'
 " Plug 'romainl/vim-cool'
 " Plug 'tmux-plugins/vim-tmux'
 " Plug 'linktohack/vim-gfortran-compiler'
@@ -149,7 +149,7 @@ endif
 
 " python used
 " let g:python_host_prog="/home/ng1154e/.local/opt/python/2.7.13/bin/python"
-" let g:python3_host_prog="/home/adechaum/anaconda3/anaconda3/envs/neovim/bin/python"
+let g:python3_host_prog="/home/adechaum/anaconda3/envs/vim/bin/python"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " do not use history when leavy buffer
@@ -374,6 +374,11 @@ let g:neomake_open_list = 2
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " riv
 let g:riv_disable_folding = 1
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" dispatch
+nnoremap <leader>b :Dispatch<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nvim
