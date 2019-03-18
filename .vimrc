@@ -230,7 +230,7 @@ nnoremap <leader>g :Grepper<cr>
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 let g:grepper = {}
-let g:grepper.next_tool = '<leader>g'
+let g:grepper = { 'next_tool': '<leader>g' }
 let g:grepper.tools = ['rg', 'ack', 'grep', 'git']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
