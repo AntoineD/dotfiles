@@ -230,7 +230,7 @@ nnoremap <leader>g :Grepper<cr>
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 let g:grepper = {}
-let g:grepper = { 'next_tool': '<leader>g' }
+let g:grepper.prompt_mapping_tool = '<leader>g'
 let g:grepper.tools = ['rg', 'ack', 'grep', 'git']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -373,7 +373,10 @@ let g:neomake_open_list = 2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " riv
+set nofoldenable
 let g:riv_disable_folding = 1
+let g:riv_fold_auto_update = 0
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " dispatch
 nnoremap <leader>b :Dispatch<CR>
