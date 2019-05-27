@@ -52,8 +52,8 @@ Plug 'w0rp/ale'
 Plug 'hdima/python-syntax'
 Plug 'vimjas/vim-python-pep8-indent'
 Plug 'gu-fan/riv.vim'
-" Plug 'Chiel92/vim-autoformat'
-" Plug 'vim-syntastic/syntastic'
+Plug 'honza/dockerfile.vim'
+Plug 'martinda/Jenkinsfile-vim-syntax'
 """""""""""""""""""""""""""""
 " editing
 Plug 'wellle/targets.vim'
