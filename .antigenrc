@@ -4,7 +4,7 @@ antigen bundle git
 antigen bundle colored-man-pages
 antigen bundle pip
 antigen bundle python
-antigen bundle autojump
+#antigen bundle autojump
 antigen bundle dirpersist
 antigen bundle common-aliases
 
