@@ -1,7 +1,7 @@
 source ~/.proxy
 
 # export ANTIGEN_CACHE=false
-source $HOME/dotfiles/antigen/antigen.zsh
+source $HOME/dotfiles/antigen.zsh
 antigen init $HOME/dotfiles/.antigenrc
 
 ################################################################################
