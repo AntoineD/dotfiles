@@ -1,33 +1,40 @@
 [user]
-	name = Antoine DECHAUME
-	email = antoine.dechaume@c-s.fr
+    name = Antoine DECHAUME
+    email = antoine.dechaume@c-s.fr
 [difftool]
-	prompt = false
+    prompt = false
 [diff]
-	tool = meld
+    tool = meld
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
+[merge]
+    tool = meld
+[mergetool "meld"]
+    cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+    # cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
 [color]
-	status = auto
-	branch = auto
-	diff = auto
-	ui = auto
+    status = auto
+    branch = auto
+    diff = auto
+    ui = auto
 [core]
-	excludesfile = ~/.gitignore
-	autocrlf = input
-	editor = nvim
-	symlinks = true
+    excludesfile = ~/.gitignore
+    autocrlf = input
+    editor = nvim
+    symlinks = true
 [gui]
-	fontdiff = -family Monospace -size 10 -weight normal -slant roman -underline 0 -overstrike 0
-	warndetachedcommit = true
-	fontui = -family gothic -size 10 -weight normal -slant roman -underline 0 -overstrike 0
-	spellingdictionary = none
-	tabsize = 4
+    # fontdiff = -family Monospace -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+    warndetachedcommit = true
+    # fontui = -family gothic -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+    spellingdictionary = none
+    tabsize = 4
 [http]
-	sslVerify = true
+    sslVerify = true
 [svn]
     rmdir = true
 [url "http://"]
-	insteadOf = git://
+    insteadOf = git://
 [push]
-	default = matching
+    default = matching
 [credential]
-	helper = store --file ~/.gitcredentials
+    helper = store --file ~/.gitcredentials
