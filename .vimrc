@@ -19,6 +19,7 @@ Plug 'icymind/NeoSolarized'
 " misc
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-dotenv'
+Plug 'tpope/vim-obsession'
 " Plug 'neomake/neomake'
 " Plug 'romainl/vim-cool'
 " Plug 'tmux-plugins/vim-tmux'
@@ -148,7 +149,7 @@ if has('mouse')
 endif
 
 " python used
-" let g:python_host_prog="/home/ng1154e/.local/opt/python/2.7.13/bin/python"
+let g:python_host_prog=""
 let g:python3_host_prog="/home/adechaum/anaconda3/envs/vim/bin/python"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -244,6 +245,10 @@ let g:ale_cpp_clangtidy_executable=''
 let g:ale_cpp_cppcheck_executable=''
 let g:ale_cpp_cpplint_executable=''
 let g:ale_cpp_gcc_executable=''
+
+let g:ale_python_flake8_executable="/home/adechaum/anaconda3/envs/vim/bin/flake8"
+let g:ale_python_pylint_executable="/home/adechaum/anaconda3/envs/vim/bin/pylint"
+let g:ale_python_mypy_executable="/home/adechaum/anaconda3/envs/vim/bin/mypy"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic
