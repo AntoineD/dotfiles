@@ -21,6 +21,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-dotenv'
 Plug 'tpope/vim-obsession'
 " Plug 'neomake/neomake'
+Plug 'bfredl/nvim-miniyank'
 " Plug 'romainl/vim-cool'
 " Plug 'tmux-plugins/vim-tmux'
 " Plug 'linktohack/vim-gfortran-compiler'
@@ -48,9 +49,9 @@ Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 """""""""""""""""""""""""""""
 " syntax
+Plug 'dense-analysis/ale'
 Plug 'chase/vim-ansible-yaml'
-Plug 'w0rp/ale'
-Plug 'hdima/python-syntax'
+" Plug 'hdima/python-syntax'
 Plug 'vimjas/vim-python-pep8-indent'
 Plug 'gu-fan/riv.vim'
 Plug 'honza/dockerfile.vim'
@@ -74,14 +75,14 @@ Plug 'mhinz/vim-grepper'
 " Plug 'ervandew/ag'
 """""""""""""""""""""""""""""
 " completion
-Plug 'Valloric/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
 " Plug 'rdnetto/YCM-Generator'
 " Plug 'ternjs/tern_for_vim'
 """""""""""""""""""""""""""""
 " code navigation
 Plug 'majutsushi/tagbar'
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'bronson/vim-trailing-whitespace'
+" Plug 'bronson/vim-trailing-whitespace'
 Plug 'MarcWeber/vim-addon-local-vimrc'
 
 call plug#end()
@@ -111,7 +112,7 @@ set background=dark
 " default value is "normal", Setting this option to "high" or "low" does use the
 " same Solarized palette but simply shifts some values up or down in order to
 " expand or compress the tonal range displayed.
-" let g:neosolarized_contrast = "normal"
+let g:neosolarized_contrast = "high"
 
 " Special characters such as trailing whitespace, tabs, newlines, when displayed
 " using ":set list" can be set to one of three levels depending on your needs.
@@ -150,7 +151,7 @@ endif
 
 " python used
 let g:python_host_prog=""
-let g:python3_host_prog="/home/adechaum/anaconda3/envs/vim/bin/python"
+let g:python3_host_prog="/home/adechaum/miniconda3/envs/vim/bin/python"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " do not use history when leavy buffer
@@ -246,9 +247,19 @@ let g:ale_cpp_cppcheck_executable=''
 let g:ale_cpp_cpplint_executable=''
 let g:ale_cpp_gcc_executable=''
 
-let g:ale_python_flake8_executable="/home/adechaum/anaconda3/envs/vim/bin/flake8"
-let g:ale_python_pylint_executable="/home/adechaum/anaconda3/envs/vim/bin/pylint"
-let g:ale_python_mypy_executable="/home/adechaum/anaconda3/envs/vim/bin/mypy"
+" python linters and fixers
+let g:ale_python_flake8_executable="/home/adechaum/miniconda3/envs/vim/bin/flake8"
+let g:ale_python_pylint_executable="/home/adechaum/miniconda3/envs/vim/bin/pylint"
+let g:ale_python_mypy_executable="/home/adechaum/miniconda3/envs/vim/bin/mypy"
+let g:ale_python_black_executable="/home/adechaum/miniconda3/envs/vim/bin/black"
+let g:ale_python_isort_executable="/home/adechaum/miniconda3/envs/vim/bin/isort"
+
+" fixers settings
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['isort', 'black'],
+\}
+nnoremap <F7> :ALEFix<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic
@@ -282,6 +293,7 @@ let g:syntastic_always_populate_loc_list = 1
 " fzf
 :nmap <C-B> :Buffer<CR>
 :nmap <C-F> :Files<CR>
+:nmap <C-G> :GFiles<CR>
 :nmap <C-T> :Tags<CR>
 :nmap <C-H> :History<CR>
 
@@ -310,6 +322,8 @@ let g:ycm_seed_identifiers_with_syntax = 1
 let g:ycm_collect_identifiers_from_tags_files = 1
 let g:ycm_complete_in_comments = 1
 let g:ycm_confirm_extra_conf = 0
+" let g:ycm_use_clangd = 0
+let g:ycm_clangd_args = ["-background-index"]
 " let g:ycm_semantic_triggers = {
 "       \  'tex'  : ['{', '\'],
 "       \ }
@@ -387,6 +401,10 @@ let g:riv_fold_auto_update = 0
 nnoremap <leader>b :Dispatch<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" nvim-miniyank
+map p <Plug>(miniyank-autoput)
+map P <Plug>(miniyank-autoPut)
+map <leader>p <Plug>(miniyank-cycle)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nvim
