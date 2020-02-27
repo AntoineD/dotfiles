@@ -312,6 +312,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 nnoremap <leader>y :YcmCompleter GoTo<CR>
 nnoremap <leader>yd :YcmCompleter GoToDefinition<CR>
 nnoremap <leader>yi :YcmCompleter GoToInclude<CR>
+nnoremap <leader>yr :YcmCompleter GoToReferences<CR>
 nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
 nnoremap <F6> :YcmDiags<CR>
 let g:ycm_add_preview_to_completeopt = 1
