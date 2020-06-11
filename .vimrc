@@ -226,6 +226,9 @@ endif
 " no double space after . when reformating
 set nojoinspaces
 
+" autocmd FileType python setlocal textwidth=0
+autocmd FileType python setlocal fo-=t
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Grepper
 nnoremap <leader>g :Grepper<cr>
@@ -291,11 +294,12 @@ let g:syntastic_always_populate_loc_list = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " fzf
-:nmap <C-B> :Buffer<CR>
-:nmap <C-F> :Files<CR>
-:nmap <C-G> :GFiles<CR>
-:nmap <C-T> :Tags<CR>
-:nmap <C-H> :History<CR>
+nmap <C-B> :Buffer<CR>
+nmap <C-F> :Files<CR>
+nmap <C-G> :GFiles<CR>
+nmap <C-T> :Tags<CR>
+nmap <C-H> :History<CR>
+nmap <C-C> :Commands<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ultisnip
