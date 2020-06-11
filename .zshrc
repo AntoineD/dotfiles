@@ -100,3 +100,4 @@ include ~/.myrc
 # FZF
 # export FZF_DEFAULT_OPTS="--preview"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='rg --files'
