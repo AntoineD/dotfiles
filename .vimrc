@@ -4,7 +4,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-plug bootstrap
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 if !has('nvim')
   Plug 'tpope/vim-sensible'
@@ -89,12 +89,12 @@ call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "colorscheme
-if has("termguicolors")
-  set termguicolors
-endif
+" if has("termguicolors")
+"   set termguicolors
+" endif
 
 " set t_Co=16 " Explicitly tell Vim that the terminal supports 16 colors
-" set term=screen-256color
+" set term=xterm-256color
 
 " set background=light
 " set background=dark
@@ -150,8 +150,8 @@ if has('mouse')
 endif
 
 " python used
-let g:python_host_prog=""
-let g:python3_host_prog="/home/adechaum/miniconda3/envs/vim/bin/python"
+let g:python_host_prog=0
+let g:python3_host_prog="/home/antoine.dechaume/.conda/envs/my/bin/python"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " do not use history when leavy buffer
@@ -251,11 +251,11 @@ let g:ale_cpp_cpplint_executable=''
 let g:ale_cpp_gcc_executable=''
 
 " python linters and fixers
-let g:ale_python_flake8_executable="/home/adechaum/miniconda3/envs/vim/bin/flake8"
-let g:ale_python_pylint_executable="/home/adechaum/miniconda3/envs/vim/bin/pylint"
-let g:ale_python_mypy_executable="/home/adechaum/miniconda3/envs/vim/bin/mypy"
-let g:ale_python_black_executable="/home/adechaum/miniconda3/envs/vim/bin/black"
-let g:ale_python_isort_executable="/home/adechaum/miniconda3/envs/vim/bin/isort"
+let g:ale_python_flake8_executable="/home/antoine.dechaume/.conda/envs/my/bin/flake8"
+let g:ale_python_pylint_executable="/home/antoine.dechaume/.conda/envs/my/bin/pylint"
+let g:ale_python_mypy_executable="/home/antoine.dechaume/.conda/envs/my/bin/mypy"
+let g:ale_python_black_executable="/home/antoine.dechaume/.conda/envs/my/bin/black"
+let g:ale_python_isort_executable="/home/antoine.dechaume/.conda/envs/my/bin/isort"
 
 " fixers settings
 let g:ale_fixers = {
