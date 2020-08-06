@@ -1,6 +1,6 @@
 [user]
     name = Antoine DECHAUME
-    email = antoine.dechaume@c-s.fr
+    email = antoine.dechaume@irt-saintexupery.com
 [difftool]
     prompt = false
 [diff]
@@ -38,3 +38,6 @@
     default = matching
 [credential]
     helper = store --file ~/.gitcredentials
+[rerere]
+	enabled = true
+	autoUpdate = true
