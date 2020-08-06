@@ -1,4 +1,6 @@
-source ~/.proxy
+include () { test -f "$1" && source "$1"; }
+
+include ~/.proxy
 
 # export ANTIGEN_CACHE=false
 source $HOME/dotfiles/antigen.zsh
@@ -52,6 +54,9 @@ umask u=rwx,g=rx,o=rx
 export PAGER=less
 # export LESS='-MN'
 
+export VISUAL=nvim
+export EDITOR="$VISUAL"
+
 # use nvim for reading manpages
 export MANPAGER="nvim -c 'set ft=man' -"
 
@@ -62,8 +67,6 @@ export PYTHONSTARTUP=~/dotfiles/.pythonrc
 export LANG=en_US.UTF-8
 export LC_ALL=$LANG
 export LANGUAGE=$LANG
-
-include () { test -f "$1" && source "$1"; }
 
 ################################################################################
 # alias
@@ -79,7 +82,6 @@ alias cp='cp -i'
 alias mv='mv -i'
 alias dir='ls -ba'
 alias ss="ps -aux"
-alias dot='ls .[a-zA-Z0-9_]*'
 alias m="less"
 alias v="vim"
 alias n="nvim"
