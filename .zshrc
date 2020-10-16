@@ -70,7 +70,6 @@ export LANGUAGE=$LANG
 
 ################################################################################
 # alias
-alias grep='grep --color=auto'
 alias ll='ls -AFGh --color'
 alias lt='ls -AFGlrth --color'
 alias l='ls -AFGlh --color'
@@ -81,11 +80,12 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias dir='ls -ba'
-alias ss="ps -aux"
 alias m="less"
 alias v="vim"
 alias n="nvim"
 alias c="cd"
+alias ca="conda activate"
+alias cda="conda deactivate"
 
 # for using fd
 unalias fd
