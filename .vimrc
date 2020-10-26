@@ -12,12 +12,13 @@ endif
 
 """"""""""""""""""""""""""""
 " theme
-Plug 'icymind/NeoSolarized'
+Plug 'overcache/NeoSolarized'
 " Plug 'romainl/flattened'
 " Plug 'altercation/vim-colors-solarized'
 """"""""""""""""""""""""""""
 " misc
 Plug 'tpope/vim-dispatch'
+Plug 'radenling/vim-dispatch-neovim'
 Plug 'tpope/vim-dotenv'
 Plug 'tpope/vim-obsession'
 " Plug 'neomake/neomake'
@@ -46,16 +47,18 @@ Plug 'tomtom/tcomment_vim'
 Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 """""""""""""""""""""""""""""
 " snippets
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 """""""""""""""""""""""""""""
 " syntax
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 Plug 'chase/vim-ansible-yaml'
 " Plug 'hdima/python-syntax'
 Plug 'vimjas/vim-python-pep8-indent'
-Plug 'gu-fan/riv.vim'
+" Plug 'gu-fan/riv.vim'
+Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'honza/dockerfile.vim'
 Plug 'martinda/Jenkinsfile-vim-syntax'
+Plug 'cespare/vim-toml'
 """""""""""""""""""""""""""""
 " editing
 Plug 'wellle/targets.vim'
@@ -64,8 +67,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-" Plug 'matze/vim-move'
-" Plug 'justinmk/vim-sneak'
+" Plug 'matze/vim-moveovercache Plug 'justinmk/vim-sneak'
 " Plug 'osyo-manga/vim-over'
 " Plug 'LaTeX-Box-Team/LaTeX-Box'
 """""""""""""""""""""""""""""
@@ -75,23 +77,27 @@ Plug 'mhinz/vim-grepper'
 " Plug 'ervandew/ag'
 """""""""""""""""""""""""""""
 " completion
-Plug 'ycm-core/YouCompleteMe'
+" Plug 'ycm-core/YouCompleteMe'
 " Plug 'rdnetto/YCM-Generator'
-" Plug 'ternjs/tern_for_vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 """""""""""""""""""""""""""""
 " code navigation
 Plug 'majutsushi/tagbar'
 Plug 'ludovicchabant/vim-gutentags'
 " Plug 'bronson/vim-trailing-whitespace'
 Plug 'MarcWeber/vim-addon-local-vimrc'
+"""""""""""""""""""""""""""""
+" testing
+Plug 'vim-test/vim-test'
+Plug '5long/pytest-vim-compiler'
 
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "colorscheme
-" if has("termguicolors")
-"   set termguicolors
-" endif
+if has("termguicolors")
+  set termguicolors
+endif
 
 " set t_Co=16 " Explicitly tell Vim that the terminal supports 16 colors
 " set term=xterm-256color
@@ -151,7 +157,7 @@ endif
 
 " python used
 let g:python_host_prog=0
-let g:python3_host_prog="/home/antoine.dechaume/.conda/envs/my/bin/python"
+let g:python3_host_prog="/home/antoine.dechaume/.conda/envs/vim/bin/python"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " do not use history when leavy buffer
@@ -229,6 +235,22 @@ set nojoinspaces
 " autocmd FileType python setlocal textwidth=0
 autocmd FileType python setlocal fo-=t
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" nvim
+if has('nvim')
+  tnoremap <Esc> <C-\><C-n>
+  tnoremap <A-h> <C-\><C-n><C-w>h
+  tnoremap <A-j> <C-\><C-n><C-w>j
+  tnoremap <A-k> <C-\><C-n><C-w>k
+  tnoremap <A-l> <C-\><C-n><C-w>l
+  nnoremap <A-h> <C-w>h
+  nnoremap <A-j> <C-w>j
+  nnoremap <A-k> <C-w>k
+  nnoremap <A-l> <C-w>l
+  set guicursor=
+  " let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Grepper
 nnoremap <leader>g :Grepper<cr>
@@ -239,116 +261,13 @@ let g:grepper.prompt_mapping_tool = '<leader>g'
 let g:grepper.tools = ['rg', 'ack', 'grep', 'git']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" ALE
-let g:ale_sign_error='E'
-let g:ale_sign_warning='W'
-" prevent ALE linting for cpp
-let g:ale_cpp_clang_executable=''
-let g:ale_cpp_clangcheck_executable=''
-let g:ale_cpp_clangtidy_executable=''
-let g:ale_cpp_cppcheck_executable=''
-let g:ale_cpp_cpplint_executable=''
-let g:ale_cpp_gcc_executable=''
-
-" python linters and fixers
-let g:ale_python_flake8_executable="/home/antoine.dechaume/.conda/envs/my/bin/flake8"
-let g:ale_python_pylint_executable="/home/antoine.dechaume/.conda/envs/my/bin/pylint"
-let g:ale_python_mypy_executable="/home/antoine.dechaume/.conda/envs/my/bin/mypy"
-let g:ale_python_black_executable="/home/antoine.dechaume/.conda/envs/my/bin/black"
-let g:ale_python_isort_executable="/home/antoine.dechaume/.conda/envs/my/bin/isort"
-
-" fixers settings
-let g:ale_fixers = {
-\   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'python': ['isort', 'black'],
-\}
-nnoremap <F7> :ALEFix<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Syntastic
-let g:syntastic_error_symbol='E'
-let g:syntastic_warning_symbol='W'
-let g:syntastic_style_error_symbol='SE'
-let g:syntastic_style_warning_symbol='SW'
-" let g:syntastic_mode_map = { 'mode': 'active',
-"                            \ 'active_filetypes': ['python'],
-"                            \ 'passive_filetypes': [] }
-let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list=1
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" CtrlP
-" let g:ctrlp_max_height = 30
-" let g:ctrlp_extensions = ['tag']
-" let g:ctrlp_open_multiple_files = 'r'
-" :nmap <C-B> :CtrlPBuffer<CR>
-" :nmap <C-T> :CtrlPTag<CR>
-"
-" " let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-"
-" if executable('rg')
-"   set grepprg=rg\ --color=never
-"   let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
-"   let g:ctrlp_use_caching = 0
-" endif
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " fzf
 nmap <C-B> :Buffer<CR>
 nmap <C-F> :Files<CR>
 nmap <C-G> :GFiles<CR>
 nmap <C-T> :Tags<CR>
 nmap <C-H> :History<CR>
-nmap <C-C> :Commands<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Ultisnip
-" to get ultisnip to work with YCM
-let g:UltiSnipsExpandTrigger="<c-j>"
-" let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-" let g:UltiSnipsJumpForwardTrigger="<tab>"
-" let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" YCM
-" nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <leader>y :YcmCompleter GoTo<CR>
-nnoremap <leader>yd :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>yi :YcmCompleter GoToInclude<CR>
-nnoremap <leader>yr :YcmCompleter GoToReferences<CR>
-nnoremap <F5> :YcmForceCompileAndDiagnostics<CR>
-nnoremap <F6> :YcmDiags<CR>
-let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_always_populate_location_list = 1
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_complete_in_comments = 1
-let g:ycm_confirm_extra_conf = 0
-" let g:ycm_use_clangd = 0
-let g:ycm_clangd_args = ["-background-index"]
-" let g:ycm_semantic_triggers = {
-"       \  'tex'  : ['{', '\'],
-"       \ }
-" function! g:UltiSnips_Complete()
-"     call UltiSnips_ExpandSnippet()
-"     if g:ulti_expand_res == 0
-"         if pumvisible()
-"             return "\<C-n>"
-"         else
-"             call UltiSnips_JumpForwards()
-"             if g:ulti_jump_forwards_res == 0
-"                return "\<TAB>"
-"             endif
-"         endif
-"     endif
-"     return ""
-" endfunction
-"
-" au BufEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
-" au BufEnter * exec "snoremap <silent> " . g:UltiSnipsExpandTrigger . " <Esc>:call UltiSnips_ExpandSnippetOrJump()<cr>"
+" nmap <C-C> :Commands<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-move
@@ -389,7 +308,7 @@ nmap <F8> :TagbarToggle<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gutentags
-let g:gutentags_ctags_options_file = '$HOME/.ctags'
+let g:gutentags_ctags_options_file = '$HOME/dotfiles/.ctags'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " neomake
@@ -412,17 +331,21 @@ map P <Plug>(miniyank-autoPut)
 map <leader>p <Plug>(miniyank-cycle)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" nvim
-if has('nvim')
-  tnoremap <Esc> <C-\><C-n>
-  tnoremap <A-h> <C-\><C-n><C-w>h
-  tnoremap <A-j> <C-\><C-n><C-w>j
-  tnoremap <A-k> <C-\><C-n><C-w>k
-  tnoremap <A-l> <C-\><C-n><C-w>l
-  nnoremap <A-h> <C-w>h
-  nnoremap <A-j> <C-w>j
-  nnoremap <A-k> <C-w>k
-  nnoremap <A-l> <C-w>l
-  set guicursor=
-  " let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-endif
+" CoC.nvim
+source ~/dotfiles/vimrc-coc
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" coc-snippet.nvim
+
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? coc#_select_confirm() :
+"       \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
+"
+" function! s:check_back_space() abort
+"   let col = col('.') - 1
+"   return !col || getline('.')[col - 1]  =~# '\s'
+" endfunction
+"
+" let g:coc_snippet_next = '<tab>'

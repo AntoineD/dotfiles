@@ -1,0 +1,23 @@
+let g:ale_sign_error='E'
+let g:ale_sign_warning='W'
+" prevent ALE linting for cpp
+let g:ale_cpp_clang_executable=''
+let g:ale_cpp_clangcheck_executable=''
+let g:ale_cpp_clangtidy_executable=''
+let g:ale_cpp_cppcheck_executable=''
+let g:ale_cpp_cpplint_executable=''
+let g:ale_cpp_gcc_executable=''
+
+" python linters and fixers
+let g:ale_python_flake8_executable="/home/antoine.dechaume/.conda/envs/my/bin/flake8"
+let g:ale_python_pylint_executable="/home/antoine.dechaume/.conda/envs/my/bin/pylint"
+let g:ale_python_mypy_executable="/home/antoine.dechaume/.conda/envs/my/bin/mypy"
+let g:ale_python_black_executable="/home/antoine.dechaume/.conda/envs/my/bin/black"
+let g:ale_python_isort_executable="/home/antoine.dechaume/.conda/envs/my/bin/isort"
+
+" fixers settings
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['isort', 'black'],
+\}
+nnoremap <F7> :ALEFix<CR>
