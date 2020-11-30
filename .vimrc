@@ -34,7 +34,7 @@ Plug 'bfredl/nvim-miniyank'
 " file system
 " Plug 'ctrlpvim/ctrlp.vim'
 " Plug 'FelikZ/ctrlp-py-matcher'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-dirvish'
 " Plug 'tpope/vim-vinegar'
@@ -50,15 +50,16 @@ Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 " Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 """""""""""""""""""""""""""""
 " syntax
-" Plug 'dense-analysis/ale'
-Plug 'chase/vim-ansible-yaml'
-" Plug 'hdima/python-syntax'
-Plug 'vimjas/vim-python-pep8-indent'
-" Plug 'gu-fan/riv.vim'
-Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'honza/dockerfile.vim'
-Plug 'martinda/Jenkinsfile-vim-syntax'
-Plug 'cespare/vim-toml'
+" " Plug 'dense-analysis/ale'
+" " Plug 'hdima/python-syntax'
+" " Plug 'gu-fan/riv.vim'
+" Plug 'chase/vim-ansible-yaml'
+" Plug 'vimjas/vim-python-pep8-indent'
+" Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'honza/dockerfile.vim'
+" Plug 'martinda/Jenkinsfile-vim-syntax'
+" Plug 'cespare/vim-toml'
+Plug 'sheerun/vim-polyglot'
 """""""""""""""""""""""""""""
 " editing
 Plug 'wellle/targets.vim'
@@ -157,7 +158,7 @@ endif
 
 " python used
 let g:python_host_prog=0
-let g:python3_host_prog="/home/antoine.dechaume/.conda/envs/vim/bin/python"
+let g:python3_host_prog="/home/antoine/.venvs/vim/bin/python"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " do not use history when leavy buffer
@@ -258,16 +259,16 @@ nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 let g:grepper = {}
 let g:grepper.prompt_mapping_tool = '<leader>g'
-let g:grepper.tools = ['rg', 'ack', 'grep', 'git']
+let g:grepper.tools = ['rg', 'grep', 'git']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " fzf
-nmap <C-B> :Buffer<CR>
-nmap <C-F> :Files<CR>
-nmap <C-G> :GFiles<CR>
-nmap <C-T> :Tags<CR>
-nmap <C-H> :History<CR>
-" nmap <C-C> :Commands<CR>
+nmap <leader>b :Buffer<CR>
+nnoremap <leader>f :Files<CR>
+" nmap <leader>g :GFiles<CR>
+nmap <leader>t :Tags<CR>
+nmap <leader>h :History<CR>
+nmap <leader>c :Commands<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-move
@@ -322,7 +323,7 @@ let g:riv_fold_auto_update = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " dispatch
-nnoremap <leader>b :Dispatch<CR>
+" nnoremap <leader>b :Dispatch<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nvim-miniyank
