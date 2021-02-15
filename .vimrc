@@ -48,6 +48,7 @@ Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 """""""""""""""""""""""""""""
 " snippets
 " Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 """""""""""""""""""""""""""""
 " syntax
 " " Plug 'dense-analysis/ale'
@@ -55,11 +56,11 @@ Plug 'vim-airline/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 " " Plug 'gu-fan/riv.vim'
 " Plug 'chase/vim-ansible-yaml'
 " Plug 'vimjas/vim-python-pep8-indent'
-" Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' }
 " Plug 'honza/dockerfile.vim'
 " Plug 'martinda/Jenkinsfile-vim-syntax'
 " Plug 'cespare/vim-toml'
 Plug 'sheerun/vim-polyglot'
+Plug 'linkinpark342/xonsh-vim'
 """""""""""""""""""""""""""""
 " editing
 Plug 'wellle/targets.vim'
@@ -81,6 +82,7 @@ Plug 'mhinz/vim-grepper'
 " Plug 'ycm-core/YouCompleteMe'
 " Plug 'rdnetto/YCM-Generator'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' }
 """""""""""""""""""""""""""""
 " code navigation
 Plug 'majutsushi/tagbar'
@@ -158,7 +160,7 @@ endif
 
 " python used
 let g:python_host_prog=0
-let g:python3_host_prog="/home/antoine/.venvs/vim/bin/python"
+let g:python3_host_prog="/home/antoine.dechaume/.conda/envs/vim/bin/python"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " do not use history when leavy buffer
@@ -221,7 +223,7 @@ set clipboard^=unnamedplus
 " set foldmethod=indent
 
 set wildignore+=*.o,*.so,*.pyc,tags
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.tox/*
 
 " center current line on screen
 " set scrolloff=1000
@@ -264,7 +266,7 @@ let g:grepper.tools = ['rg', 'grep', 'git']
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " fzf
 nmap <leader>b :Buffer<CR>
-nnoremap <leader>f :Files<CR>
+nmap <leader>f :Files<CR>
 " nmap <leader>g :GFiles<CR>
 nmap <leader>t :Tags<CR>
 nmap <leader>h :History<CR>
@@ -350,3 +352,9 @@ source ~/dotfiles/vimrc-coc
 " endfunction
 "
 " let g:coc_snippet_next = '<tab>'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:sphinx_html_output_dirs = [
+      \ '_build/html', 'build/html',
+      \ 'doc',
+      \]
