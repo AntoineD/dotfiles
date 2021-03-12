@@ -2,7 +2,8 @@ include () { test -f "$1" && source "$1"; }
 
 include ~/.proxy
 
-# export ANTIGEN_CACHE=false
+################################################################################
+# antigen
 source $HOME/dotfiles/antigen.zsh
 antigen init $HOME/dotfiles/.antigenrc
 
@@ -95,11 +96,16 @@ unalias fd
 eval `dircolors $HOME/dotfiles/dircolors-solarized/dircolors.ansi-universal`
 
 ################################################################################
-# local stuff
-include ~/.myrc
-
-################################################################################
 # FZF
 # export FZF_DEFAULT_OPTS="--preview"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files'
+
+################################################################################
+# starship
+export STARSHIP_CONFIG=~/dotfiles/starship.toml
+eval "$(starship init zsh)"
+
+################################################################################
+# local stuff
+include ~/.myrc

@@ -1,0 +1,8 @@
+# format = "[$all](bg:blue)"
+
+[python]
+disabled = true
+[ruby]
+disabled = true
+[battery]
+disabled = true
