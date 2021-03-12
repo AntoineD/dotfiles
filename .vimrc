@@ -69,7 +69,8 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-" Plug 'matze/vim-moveovercache Plug 'justinmk/vim-sneak'
+Plug 'justinmk/vim-sneak'
+" Plug 'matze/vim-moveovercache
 " Plug 'osyo-manga/vim-over'
 " Plug 'LaTeX-Box-Team/LaTeX-Box'
 """""""""""""""""""""""""""""
@@ -290,13 +291,10 @@ let g:airline#extensions#tabline#enabled = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-sneak
-" replace f with sneak
-" nmap f <Plug>Sneak_s
-" nmap F <Plug>Sneak_S
-" xmap f <Plug>Sneak_s
-" xmap F <Plug>Sneak_S
-" omap f <Plug>Sneak_s
-" omap F <Plug>Sneak_S
+map f <Plug>Sneak_f
+map F <Plug>Sneak_F
+map t <Plug>Sneak_t
+map T <Plug>Sneak_T
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " latex box
