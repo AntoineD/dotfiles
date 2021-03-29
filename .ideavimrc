@@ -1,15 +1,17 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" IdeaVIM
+set surround
+set ideajoin
+set argtextobj
+
+let g:argtextobj_pairs="(:),{:},<:>,[:]"
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Highlight the screen line of the cursor
 set cursorline
 
-set number
+" set number
 set hlsearch   " switch on highlighting the last used search pattern.
-" set ignorecase
-" Use <C-L> to clear the highlighting of :set hlsearch.
-" setuptools settings
-"if maparg('<C-L>', 'n') ==# ''
-map <C-L> :nohlsearch<CR>
-"endif
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
@@ -21,10 +23,6 @@ map Q gq
 
 let mapleader = "\"
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" do not use history when leavy buffer
-set hidden
-
 " leader w to delete buffer
 map  <leader>w <Action>(CloseContent)
 vmap <leader>w <C-C><Action>(CloseContent)
@@ -35,48 +33,17 @@ map  <leader>s <Action>(SaveDocument)
 vmap <leader>s <C-C><Action>(SaveDocument)
 imap <leader>s <Esc><Action>(SaveDocument)
 
-" line motion
-" nnoremap <C-j> :m .+1<CR>==
-" nnoremap <C-k> :m .-2<CR>==
-" inoremap <C-j> <Esc>:m .+1<CR>==gi
-" inoremap <C-k> <Esc>:m .-2<CR>==gi
-" vnoremap <C-j> :m '>+1<CR>gv=gv
-" vnoremap <C-k> :m '<-2<CR>gv=gv
-
-" exit insert mode
-inoremap <C-c> <Esc>
-
-" indentation
-" set smartindent
-
-" set completeopt=menuone,longest,preview
-
 " use OS clipboard
 set clipboard^=unnamedplus
-
-" set foldmethod=indent
-
-" set wildignore+=*.o,*.so,*.pyc,tags
-" set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.tox/*
 
 " center current line on screen
 " set scrolloff=1000
 
-" if exists('&inccommand')
-"   set inccommand=split
-" endif
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-sneak
 "map f <Plug>Sneak_f
 "map F <Plug>Sneak_F
 "map t <Plug>Sneak_t
 "map T <Plug>Sneak_T
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" IdeaVIM
-set surround
-set ideajoin
 
 " easy window navigation
 nnoremap <c-l> <c-w>l
@@ -99,3 +66,15 @@ map [c <Action>(VcsShowPrevChangeMarker)
 map ]c <Action>(VcsShowNextChangeMarker)
 map [b <Action>(PreviousTab)
 map ]b <Action>(NextTab)
+map <c-l> :nohlsearch<CR>
+
+" exit insert mode
+inoremap <C-c> <Esc>
+
+" line motion
+nnoremap <C-j> :m .+1<CR>==
+nnoremap <C-k> :m .-2<CR>==
+inoremap <C-j> <Esc>:m .+1<CR>==gi
+inoremap <C-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-j> :m '>+1<CR>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
