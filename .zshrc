@@ -87,6 +87,7 @@ alias n="nvim"
 alias c="cd"
 alias ca="conda activate"
 alias cda="conda deactivate"
+alias b="bat"
 
 # for using fd
 unalias fd
