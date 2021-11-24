@@ -1,6 +1,6 @@
 [user]
 	name = Antoine DECHAUME
-    email = antoine.dechaume@irt-saintexupery.com
+	email = <>
 [difftool]
     prompt = false
 [diff]
@@ -40,4 +40,33 @@
     helper = store --file ~/.gitcredentials
 [rerere]
 	enabled = true
-	autoUpdate = true
+
+# for git-delta
+[pager]
+    diff = delta
+    log = delta
+    reflog = delta
+    show = delta
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    features = decorations
+    syntax-theme = Solarized (dark)
+    # line-numbers = true
+    # side-by-side = true
+
+[delta "interactive"]
+    keep-plus-minus-markers = false
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    # hunk-header-decoration-style = blue box
+    # hunk-header-file-style = red
+    # hunk-header-line-number-style = "#067a00"
+    # hunk-header-style = file line-number syntaxautoUpdate = true
+[init]
+	templateDir = /home/antoine.dechaume/.git-template

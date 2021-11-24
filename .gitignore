@@ -1,3 +1,4 @@
-.idea
-tags*
-coc-settings.json
+/.idea
+/tags*
+/coc-settings.json
+/.venv
