@@ -59,7 +59,7 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 # use nvim for reading manpages
-export MANPAGER="nvim -c 'set ft=man' -"
+export MANPAGER="nvim +Man!"
 
 # python start file
 export PYTHONSTARTUP=~/dotfiles/.pythonrc
