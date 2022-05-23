@@ -110,3 +110,6 @@ eval "$(starship init zsh)"
 ################################################################################
 # local stuff
 include ~/.myrc
+
+export PATH=~/.local/bin:$PATH
+
