@@ -4,7 +4,7 @@
 --exclude=.git
 --exclude=.svn
 --exclude=.hg
---exclude=.tox
+--exclude=.tox/**
 --exclude=\*.swp
 --exclude=\*.bak
 --exclude=\*.pyc
