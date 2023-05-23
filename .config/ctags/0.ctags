@@ -1,10 +1,9 @@
--R
 --fields=+l
 --exclude=.\*
 --exclude=.git
 --exclude=.svn
 --exclude=.hg
---exclude=.tox/**
+--exclude=.tox
 --exclude=\*.swp
 --exclude=\*.bak
 --exclude=\*.pyc
@@ -13,3 +12,4 @@
 --exclude=cscope.\*
 --exclude=\*.tar.\*
 --exclude=build
+--exclude=doc
