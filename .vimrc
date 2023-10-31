@@ -12,9 +12,10 @@ endif
 
 """"""""""""""""""""""""""""
 " theme
-Plug 'overcache/NeoSolarized'
+" Plug 'overcache/NeoSolarized'
 " Plug 'romainl/flattened'
 " Plug 'altercation/vim-colors-solarized'
+Plug 'ishan9299/nvim-solarized-lua'
 """"""""""""""""""""""""""""
 " misc
 Plug 'tpope/vim-dispatch'
@@ -61,6 +62,7 @@ Plug 'honza/vim-snippets'
 " Plug 'cespare/vim-toml'
 Plug 'sheerun/vim-polyglot'
 Plug 'linkinpark342/xonsh-vim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 """""""""""""""""""""""""""""
 " editing
 Plug 'wellle/targets.vim'
@@ -69,7 +71,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'justinmk/vim-sneak'
+" Plug 'justinmk/vim-sneak'
 " Plug 'matze/vim-moveovercache
 " Plug 'osyo-manga/vim-over'
 " Plug 'LaTeX-Box-Team/LaTeX-Box'
@@ -83,7 +85,7 @@ Plug 'mhinz/vim-grepper'
 " Plug 'ycm-core/YouCompleteMe'
 " Plug 'rdnetto/YCM-Generator'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' }
+" Plug 'stsewd/sphinx.nvim', { 'do': ':UpdateRemotePlugins' }
 """""""""""""""""""""""""""""
 " code navigation
 Plug 'majutsushi/tagbar'
@@ -97,47 +99,18 @@ Plug '5long/pytest-vim-compiler'
 
 call plug#end()
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CoC.nvim
+source ~/dotfiles/vimrc-coc
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "colorscheme
 if has("termguicolors")
   set termguicolors
 endif
 
-" set t_Co=16 " Explicitly tell Vim that the terminal supports 16 colors
-" set term=xterm-256color
-
-" set background=light
-" set background=dark
-" let g:solarized_termcolors=256
-" colorscheme solarized
-" flattened
-" colorscheme flattened_dark
-
-" neosolarized
-" let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-" set t_8f=^[[38;2;%lu;%lu;%lum
-" set t_8b=^[[48;2;%lu;%lu;%lum
-colorscheme NeoSolarized
-set background=dark
-" default value is "normal", Setting this option to "high" or "low" does use the
-" same Solarized palette but simply shifts some values up or down in order to
-" expand or compress the tonal range displayed.
-let g:neosolarized_contrast = "high"
-
-" Special characters such as trailing whitespace, tabs, newlines, when displayed
-" using ":set list" can be set to one of three levels depending on your needs.
-" Default value is "normal". Provide "high" and "low" options.
-" let g:neosolarized_visibility = "high"
-
-" I make vertSplitBar a transparent background color. If you like the origin solarized vertSplitBar
-" style more, set this value to 0.
-" let g:neosolarized_vertSplitBgTrans = 1
-
-" If you wish to enable/disable NeoSolarized from displaying bold, underlined or italicized
-" typefaces, simply assign 1 or 0 to the appropriate variable. Default values:
-" let g:neosolarized_bold = 1
-" let g:neosolarized_underline = 1
-" let g:neosolarized_italic = 0
+colorscheme solarized
+let g:solarized_italics = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Highlight the screen line of the cursor
@@ -160,8 +133,8 @@ if has('mouse')
 endif
 
 " python used
-let g:python_host_prog=0
-let g:python3_host_prog="/home/antoine.dechaume/.conda/envs/vim/bin/python"
+" let g:python_host_prog=0
+" let g:python3_host_prog="/home/antoine.dechaume/.conda/envs/vim/bin/python"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " do not use history when leavy buffer
@@ -227,7 +200,7 @@ set wildignore+=*.o,*.so,*.pyc,tags
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.tox/*
 
 " center current line on screen
-" set scrolloff=1000
+set scrolloff=1000
 
 if exists('&inccommand')
   set inccommand=split
@@ -261,7 +234,7 @@ nnoremap <leader>g :Grepper<cr>
 nmap gs <plug>(GrepperOperator)
 xmap gs <plug>(GrepperOperator)
 let g:grepper = {}
-let g:grepper.prompt_mapping_tool = '<leader>g'
+" let g:grepper.prompt_mapping_tool = '<leader>g'
 let g:grepper.tools = ['rg', 'grep', 'git']
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -291,10 +264,10 @@ let g:airline#extensions#tabline#enabled = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-sneak
-map f <Plug>Sneak_f
-map F <Plug>Sneak_F
-map t <Plug>Sneak_t
-map T <Plug>Sneak_T
+" map f <Plug>Sneak_f
+" map F <Plug>Sneak_F
+" map t <Plug>Sneak_t
+" map T <Plug>Sneak_T
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " latex box
@@ -309,7 +282,6 @@ nmap <F8> :TagbarToggle<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gutentags
-let g:gutentags_ctags_options_file = '$HOME/dotfiles/.ctags'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " neomake
@@ -332,10 +304,6 @@ map P <Plug>(miniyank-autoPut)
 map <leader>p <Plug>(miniyank-cycle)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" CoC.nvim
-source ~/dotfiles/vimrc-coc
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " coc-snippet.nvim
 
 " inoremap <silent><expr> <TAB>
@@ -356,3 +324,23 @@ let g:sphinx_html_output_dirs = [
       \ '_build/html', 'build/html',
       \ 'doc',
       \]
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" treesitter
+lua << EOF
+  require'nvim-treesitter.configs'.setup {
+    -- Modules and its options go here
+    highlight = { enable = true },
+    incremental_selection = { enable = true },
+    textobjects = { enable = true },
+  }
+EOF
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-test
+nmap <silent> <leader>Tn :TestNearest<CR>
+nmap <silent> <leader>Tf :TestFile<CR>
+nmap <silent> <leader>Ts :TestSuite<CR>
+nmap <silent> <leader>Tl :TestLast<CR>
+nmap <silent> <leader>Tv :TestVisit<CR>
+let test#strategy = "neovim"
