@@ -36,6 +36,7 @@ setopt hist_save_no_dups
 # completion
 zstyle ':completion:*' hosts off
 bindkey -M menuselect '^M' .accept-line
+source <(glab completion -s zsh); compdef _glab glab
 
 ################################################################################
 # autosuggestions
@@ -69,6 +70,8 @@ export LANG=en_US.UTF-8
 export LC_ALL=$LANG
 export LANGUAGE=$LANG
 
+export PATH=~/.local/bin:$PATH
+
 ################################################################################
 # alias
 alias ll='ls -AFGh --color'
@@ -88,6 +91,8 @@ alias c="cd"
 alias ca="conda activate"
 alias cda="conda deactivate"
 alias b="bat"
+alias t="tox -e"
+alias mm="micromamba"
 
 # for using fd
 unalias fd
@@ -98,9 +103,11 @@ eval `dircolors $HOME/dotfiles/dircolors-solarized/dircolors.ansi-universal`
 
 ################################################################################
 # FZF
+source <(fzf --zsh)
+export FZF_DEFAULT_COMMAND="fd --type file --color=always"
+export FZF_DEFAULT_OPTS="--ansi"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # export FZF_DEFAULT_OPTS="--preview"
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg --files'
 
 ################################################################################
 # starship
@@ -110,6 +117,3 @@ eval "$(starship init zsh)"
 ################################################################################
 # local stuff
 include ~/.myrc
-
-export PATH=~/.local/bin:$PATH
-

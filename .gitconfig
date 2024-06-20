@@ -1,17 +1,6 @@
 [user]
-	name = Antoine DECHAUME
-	email = <>
-[difftool]
-    prompt = false
-[diff]
-	tool = meld
-[difftool "meld"]
-    cmd = meld "$LOCAL" "$REMOTE"
-[merge]
-	tool = meld
-[mergetool "meld"]
-    cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
-    # cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+    name = Antoine DECHAUME
+    email = <>
 [color]
     status = auto
     branch = auto
@@ -39,14 +28,14 @@
 [credential]
     helper = store --file ~/.gitcredentials
 [rerere]
-	enabled = true
+    enabled = true
 
 # for git-delta
-[pager]
-    diff = delta
-    log = delta
-    reflog = delta
-    show = delta
+# [pager]
+#     diff = delta
+#     log = delta
+#     reflog = delta
+#     show = delta
 
 [interactive]
     diffFilter = delta --color-only --features=interactive
@@ -56,6 +45,7 @@
     syntax-theme = Solarized (dark)
     # line-numbers = true
     # side-by-side = true
+    wrap-max-lines = unlimited
 
 [delta "interactive"]
     keep-plus-minus-markers = false
@@ -68,5 +58,30 @@
     # hunk-header-file-style = red
     # hunk-header-line-number-style = "#067a00"
     # hunk-header-style = file line-number syntaxautoUpdate = true
-[init]
-	templateDir = /home/antoine.dechaume/.git-template
+
+[difftool]
+    prompt = false
+
+# Diff with meld
+[diff]
+    tool = meld
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
+[merge]
+    tool = meld
+[mergetool "meld"]
+    cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output "$MERGED"
+    # cmd = meld "$LOCAL" "$BASE" "$REMOTE" --output "$MERGED"
+
+# Diff with difftastic
+[diff]
+    external = difft
+    # tool = difftastic
+[difftool "difftastic"]
+    cmd = difft "$LOCAL" "$REMOTE"
+[pager]
+    difftool = true
+    # diff = difft
+    # log = difft
+    # reflog = difft
+    # show = difft
